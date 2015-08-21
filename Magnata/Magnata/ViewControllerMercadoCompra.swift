@@ -29,7 +29,7 @@ class ViewControllerMercadoCompra: UIViewController, UITableViewDataSource, UITa
     func loadTeams() {
         
         //Accessing the JSON.
-        let filePath = NSBundle.mainBundle().pathForResource("MercadoAcoes", ofType: "json")
+        let filePath = NSBundle.mainBundle().pathForResource("MercadoCompraAcoes", ofType: "json")
         var readError : NSError?
         let data = NSData(contentsOfFile: filePath!, options: NSDataReadingOptions.DataReadingUncached,error: &readError)
         let json = JSON(data:data!)
