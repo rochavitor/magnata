@@ -1,2 +1,5 @@
- [{"time": "São Paulo", "valor_atual": 100, "quantidade": 20, "valorizacao": 0.50},
-  {"time": "Corinthians", "valor_atual": 200, "quantidade": 3, "valorizacao": 5.00}]
+[{"time": "São Paulo", "valor_atual": 100.98, "quantidade": 20, "valorizacao": 1.50},
+ {"time": "Corinthians", "valor_atual": 200.34, "quantidade": 3, "valorizacao": 5.04},
+ {"time": "Santos", "valor_atual": 130.05, "quantidade": 3, "valorizacao": 5.78},
+ {"time": "Cruzeiro", "valor_atual": 30.76, "quantidade": 3, "valorizacao": 7.45},
+ {"time": "Sport", "valor_atual": 40.90, "quantidade": 3, "valorizacao": 10.67}]

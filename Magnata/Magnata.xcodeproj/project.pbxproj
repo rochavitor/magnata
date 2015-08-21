@@ -22,6 +22,7 @@
 		A784CAD21B86994E0059C18A /* MercadoCompraAcoes.json in Resources */ = {isa = PBXBuildFile; fileRef = A784CAD11B86994E0059C18A /* MercadoCompraAcoes.json */; };
 		A784CAD41B869D400059C18A /* CarteiraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784CAD31B869D400059C18A /* CarteiraCell.swift */; };
 		A784CAD61B86A1D30059C18A /* ViewControllerCarteira.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784CAD51B86A1D30059C18A /* ViewControllerCarteira.swift */; };
+		A784CADA1B87A05B0059C18A /* CarteiraVendaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784CAD91B87A05B0059C18A /* CarteiraVendaCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		A784CAD11B86994E0059C18A /* MercadoCompraAcoes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MercadoCompraAcoes.json; sourceTree = "<group>"; };
 		A784CAD31B869D400059C18A /* CarteiraCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarteiraCell.swift; sourceTree = "<group>"; };
 		A784CAD51B86A1D30059C18A /* ViewControllerCarteira.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerCarteira.swift; sourceTree = "<group>"; };
+		A784CAD91B87A05B0059C18A /* CarteiraVendaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarteiraVendaCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				22EE02481B8645DD00AF5FD5 /* AppDelegate.swift */,
 				22EE024A1B8645DD00AF5FD5 /* ViewController.swift */,
 				A784CAD31B869D400059C18A /* CarteiraCell.swift */,
+				A784CAD91B87A05B0059C18A /* CarteiraVendaCell.swift */,
 				22D77B991B8794EF00224455 /* MercadoCell.swift */,
 				22EE024C1B8645DD00AF5FD5 /* Main.storyboard */,
 				A784CACF1B8698C40059C18A /* CarteiraVenda.json */,
@@ -246,6 +249,7 @@
 				22D77B9C1B87975200224455 /* ViewControllerMercado.swift in Sources */,
 				A784CAD41B869D400059C18A /* CarteiraCell.swift in Sources */,
 				A784CACB1B86976C0059C18A /* SwiftyJSON.swift in Sources */,
+				A784CADA1B87A05B0059C18A /* CarteiraVendaCell.swift in Sources */,
 				22EE024B1B8645DD00AF5FD5 /* ViewController.swift in Sources */,
 				22D77B9A1B8794EF00224455 /* MercadoCell.swift in Sources */,
 				A784CAD61B86A1D30059C18A /* ViewControllerCarteira.swift in Sources */,
