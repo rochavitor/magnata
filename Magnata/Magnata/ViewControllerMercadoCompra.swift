@@ -9,9 +9,9 @@
 
 import UIKit
 
-class ViewControllerMercado: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class ViewControllerMercadoCompra: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
-    var acoes = [Mercado]()
+    var acoes = [MercadoCompra]()
     
     @IBOutlet var tableView: UITableView!
     
@@ -39,8 +39,8 @@ class ViewControllerMercado: UIViewController, UITableViewDataSource, UITableVie
         for (key : String, quest: JSON ) in json{
             var index = key.toInt()
             println(json[index!]["time"])
-            println(json[index!]["valor_inicial"])
-            acoes.append(Mercado(id: index!, name: String(stringInterpolationSegment : json[index!]["time"]), valor: String(stringInterpolationSegment : json[index!]["valor_atual"]), variacao: String(stringInterpolationSegment : json[index!]["valorizacao"])))
+            println(json[index!]["usuario"])
+            acoes.append(MercadoCompra(id: index!, username: String(stringInterpolationSegment : json[index!]["usuario"]), valor: String(stringInterpolationSegment : json[index!]["valor"]), quantidade: String(stringInterpolationSegment : json[index!]["quantidade"])))
         }
     }
     
@@ -55,13 +55,13 @@ class ViewControllerMercado: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("mercadoCell", forIndexPath: indexPath) as! MercadoCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("mercadoCompraCell", forIndexPath: indexPath) as! MercadoCompraCell
         
         let row = indexPath.row
-        cell.teamImage.image = UIImage(named: StringToSigla(acoes[row].name) as String!)
-        cell.teamName.text = acoes[row].name
+        
+        cell.username.text = acoes[row].username
         cell.valor.text = acoes[row].valor
-        cell.variacao.text = acoes[row].variacao
+        cell.quantidade.text = acoes[row].quantidade
         
         return cell
     }
@@ -71,7 +71,7 @@ class ViewControllerMercado: UIViewController, UITableViewDataSource, UITableVie
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         let row = indexPath.row
-//        println(acoes[row].quantidade)
+        //        println(acoes[row].quantidade)
     }
     
     
@@ -91,20 +91,24 @@ class ViewControllerMercado: UIViewController, UITableViewDataSource, UITableVie
             return "ERROR"
         }
     }
-
+    
+    
+    @IBAction func onCancelTapped(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
 }
 
-public class Mercado {
+public class MercadoCompra {
     public var id: Int
-    public var name: String
+    public var username: String
     public var valor: String
-    public var variacao: String
+    public var quantidade: String
     
-    public init(id: Int, name: String, valor: String, variacao: String) {
+    public init(id: Int, username: String, valor: String, quantidade: String) {
         self.id = id
-        self.name = name
+        self.username = username
         self.valor = valor
-        self.variacao = variacao
+        self.quantidade = quantidade
     }
 }
