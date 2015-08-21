@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22D77B9A1B8794EF00224455 /* MercadoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D77B991B8794EF00224455 /* MercadoCell.swift */; };
+		22D77B9C1B87975200224455 /* ViewControllerMercado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D77B9B1B87975200224455 /* ViewControllerMercado.swift */; };
 		22EE02491B8645DD00AF5FD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EE02481B8645DD00AF5FD5 /* AppDelegate.swift */; };
 		22EE024B1B8645DD00AF5FD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EE024A1B8645DD00AF5FD5 /* ViewController.swift */; };
 		22EE024E1B8645DD00AF5FD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22EE024C1B8645DD00AF5FD5 /* Main.storyboard */; };
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22D77B991B8794EF00224455 /* MercadoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MercadoCell.swift; sourceTree = "<group>"; };
+		22D77B9B1B87975200224455 /* ViewControllerMercado.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMercado.swift; sourceTree = "<group>"; };
 		22EE02431B8645DD00AF5FD5 /* Magnata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magnata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22EE02471B8645DD00AF5FD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22EE02481B8645DD00AF5FD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,12 +98,14 @@
 				22EE02481B8645DD00AF5FD5 /* AppDelegate.swift */,
 				22EE024A1B8645DD00AF5FD5 /* ViewController.swift */,
 				A784CAD31B869D400059C18A /* CarteiraCell.swift */,
+				22D77B991B8794EF00224455 /* MercadoCell.swift */,
 				22EE024C1B8645DD00AF5FD5 /* Main.storyboard */,
 				A784CACF1B8698C40059C18A /* CarteiraVenda.json */,
 				A784CAD11B86994E0059C18A /* MercadoCompraAcoes.json */,
 				A784CACD1B8698170059C18A /* Carteira.json */,
 				22EE024F1B8645DD00AF5FD5 /* Images.xcassets */,
 				A784CAD51B86A1D30059C18A /* ViewControllerCarteira.swift */,
+				22D77B9B1B87975200224455 /* ViewControllerMercado.swift */,
 				A784CAC91B86976C0059C18A /* SwiftyJSON.swift */,
 				A784CACA1B86976C0059C18A /* MercadoAcoes.json */,
 				22EE02511B8645DD00AF5FD5 /* LaunchScreen.xib */,
@@ -237,9 +243,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22D77B9C1B87975200224455 /* ViewControllerMercado.swift in Sources */,
 				A784CAD41B869D400059C18A /* CarteiraCell.swift in Sources */,
 				A784CACB1B86976C0059C18A /* SwiftyJSON.swift in Sources */,
 				22EE024B1B8645DD00AF5FD5 /* ViewController.swift in Sources */,
+				22D77B9A1B8794EF00224455 /* MercadoCell.swift in Sources */,
 				A784CAD61B86A1D30059C18A /* ViewControllerCarteira.swift in Sources */,
 				22EE02491B8645DD00AF5FD5 /* AppDelegate.swift in Sources */,
 			);
