@@ -17,6 +17,12 @@ class ViewControllerMercado: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        /*tableView.backgroundColor = UIColor(red: 243.0/255, green: 243.0/255, blue: 243.0/255, alpha: 0.93)
+        tableView.layer.cornerRadius = 8.0
+        tableView.layer.masksToBounds = true
+        tableView.layer.borderColor = UIColor( red: 153/255, green: 153/255, blue:0/255, alpha: 1.0 ).CGColor
+        tableView.layer.borderWidth = 2.0*/
+        
         loadTeams()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -60,8 +66,14 @@ class ViewControllerMercado: UIViewController, UITableViewDataSource, UITableVie
         let row = indexPath.row
         cell.teamImage.image = UIImage(named: StringToSigla(acoes[row].name) as String!)
         cell.teamName.text = acoes[row].name
-        cell.valor.text = acoes[row].valor
-        cell.variacao.text = acoes[row].variacao
+        cell.valor.text = "R$ " + String(format: "%.2f", (acoes[row].valor as NSString).doubleValue)
+        if (acoes[row].variacao as NSString).floatValue >= 0{
+            cell.variacao.text = "+" + String(format: "%.2f", (acoes[row].variacao as NSString).doubleValue)
+        } else {
+            cell.variacao.text = "-" + String(format: "%.2f", (acoes[row].variacao as NSString).doubleValue)
+        }
+        
+        cell.backgroundColor = UIColor.clearColor()
         
         return cell
     }
@@ -87,6 +99,34 @@ class ViewControllerMercado: UIViewController, UITableViewDataSource, UITableVie
             return "CRU"
         case "Santos":
             return "SAN"
+        case "Flamengo":
+            return "FLA"
+        case "Fluminense":
+            return "FLU"
+        case "Atlético-PR":
+            return "CAP"
+        case "Atlético-MG":
+            return "CAM"
+        case "Avaí":
+            return "AVA"
+        case "Goiás":
+            return "GOI"
+        case "Grêmio":
+            return "GRE"
+        case "Internacional":
+            return "INT"
+        case "Ponte Preta":
+            return "PON"
+        case "Coritiba":
+            return "CFC"
+        case "Chapecoense":
+            return "CHA"
+        case "Vasco":
+            return "VAS"
+        case "Joinville":
+            return "JOI"
+        case "Palmeiras":
+            return "PAL"
         default:
             return "ERROR"
         }

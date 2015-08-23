@@ -97,12 +97,12 @@ class ViewControllerCarteira: UIViewController, UITableViewDataSource, UITableVi
             let cell = tableView.dequeueReusableCellWithIdentifier("carteiraCell", forIndexPath: indexPath) as! CarteiraCell
             cell.teamImage.image = UIImage(named: StringToSigla(acoes[row].name) as String)!
             cell.teamName.text = acoes[row].name
-            cell.valor.text = "R$ " + acoes[row].valor
             cell.quantidade.text = acoes[row].quantidade + " ações"
+            cell.valor.text = "R$ " + String(format: "%.2f", (acoes[row].valor as NSString).doubleValue)
             if (acoes[row].variacao as NSString).floatValue >= 0{
-                cell.variacao.text = "+" + acoes[row].variacao
+                cell.variacao.text = "+" + String(format: "%.2f", (acoes[row].variacao as NSString).doubleValue)
             } else {
-                cell.variacao.text = "-" + acoes[row].variacao
+                cell.variacao.text = "-" + String(format: "%.2f", (acoes[row].variacao as NSString).doubleValue)
             }
             
             return cell
@@ -110,7 +110,7 @@ class ViewControllerCarteira: UIViewController, UITableViewDataSource, UITableVi
             let cell = tableView.dequeueReusableCellWithIdentifier("carteiraVendaCell", forIndexPath: indexPath) as! CarteiraVendaCell
             cell.teamImage.image = UIImage(named: StringToSigla(acoes[row].name) as String)!
             cell.teamName.text = acoes[row].name
-            cell.valor.text = "R$ " + acoes[row].valor
+            cell.valor.text = "R$ " + String(format: "%.2f", (acoes[row].valor as NSString).doubleValue)
             cell.quantidade.text = acoes[row].quantidade + " ações"
             
             return cell
@@ -139,6 +139,34 @@ class ViewControllerCarteira: UIViewController, UITableViewDataSource, UITableVi
             return "CRU"
         case "Santos":
             return "SAN"
+        case "Flamengo":
+            return "FLA"
+        case "Fluminense":
+            return "FLU"
+        case "Atlético-PR":
+            return "CAP"
+        case "Atlético-MG":
+            return "CAM"
+        case "Avaí":
+            return "AVA"
+        case "Goiás":
+            return "GOI"
+        case "Grêmio":
+            return "GRE"
+        case "Internacional":
+            return "INT"
+        case "Ponte Preta":
+            return "PON"
+        case "Coritiba":
+            return "CFC"
+        case "Chapecoense":
+            return "CHA"
+        case "Vasco":
+            return "VAS"
+        case "Joinville":
+            return "JOI"
+        case "Palmeiras":
+            return "PAL"
         default:
             return "ERROR"
         }
