@@ -17,12 +17,14 @@ class CarteiraCell: UITableViewCell {
     @IBOutlet weak var variacao: UILabel!
     
     @IBOutlet weak var buyButton: UIButton!
-    @IBOutlet weak var valuePlusButton: UIButton!
-    @IBOutlet weak var valueMinusButton: UIButton!
-    @IBOutlet weak var valueTextField: UITextField!
+    
     @IBOutlet weak var quantityPlusButton: UIButton!
     @IBOutlet weak var quantityMinusButton: UIButton!
     @IBOutlet weak var quantityTextField: UITextField!
+    
+    @IBOutlet weak var valuePlusButton: UIButton!
+    @IBOutlet weak var valueMinusButton: UIButton!
+    @IBOutlet weak var valueTextField: UITextField!
     
     class var expandedHeight: CGFloat { get { return 90 } }
     class var defaultHeight:  CGFloat { get { return 54 } }
