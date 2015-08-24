@@ -1,2 +1,5 @@
- [{"time": "São Paulo","usuario": "Thiago Coradi", "valor": 200, "quantidade": 10},
-  {"time": "Corinthians", "usuario": "Alexandre Katao", "valor": 200, "quantidade": 1}]
+[{"time": "São Paulo","usuario": "Thiago Coradi", "valor": 200, "quantidade": 10},
+ {"time": "Corinthians", "usuario": "Alexandre Katao", "valor": 200, "quantidade": 1},
+ {"time": "Palmeiras", "usuario": "Vitor Rocha", "valor": 150, "quantidade": 100},
+ {"time": "Cruzeiro", "usuario": "Ronaldo", "valor": 210, "quantidade": 50},
+ {"time": "Santos", "usuario": "Pelé", "valor": 200, "quantidade": 100}]

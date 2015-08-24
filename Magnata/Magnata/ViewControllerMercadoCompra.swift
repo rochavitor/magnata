@@ -13,6 +13,12 @@ class ViewControllerMercadoCompra: UIViewController, UITableViewDataSource, UITa
     
     var acoes = [MercadoCompra]()
     
+    var selectedIndexPath : NSIndexPath?
+    
+    
+    var cellTapped:Bool = true
+    var currentRow = 0;
+    
     @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -45,7 +51,7 @@ class ViewControllerMercadoCompra: UIViewController, UITableViewDataSource, UITa
     }
     
     
-    // MARK:  UITextFieldDelegate Methods
+    // MARK:  UITableView Data Source Methods
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -63,15 +69,55 @@ class ViewControllerMercadoCompra: UIViewController, UITableViewDataSource, UITa
         cell.valor.text = acoes[row].valor
         cell.quantidade.text = acoes[row].quantidade
         
+        
         return cell
     }
     
     // MARK:  UITableViewDelegate Methods
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-        let row = indexPath.row
-        //        println(acoes[row].quantidade)
+        let previousIndexPath = selectedIndexPath
+        if indexPath == selectedIndexPath {
+            selectedIndexPath = nil
+        }
+        else{
+            selectedIndexPath = indexPath
+        }
+        
+        var indexPaths : Array<NSIndexPath> = []
+        if let previous = previousIndexPath {
+            indexPaths += [previous]
+        }
+        if let current = selectedIndexPath {
+            indexPaths += [current]
+        }
+        if indexPaths.count > 0 {
+            tableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+        
+        
+//        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+//
+//        let row = indexPath.row
+        //println(acoes[row].quantidade)
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        (cell as! MercadoCompraCell).watchFrameChanges()
+    }
+    
+    func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        (cell as! MercadoCompraCell).ignoreFrameChanges()
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        if indexPath == selectedIndexPath {
+            return MercadoCompraCell.expandedHeight
+        }
+        else{
+            return MercadoCompraCell.defaultHeight
+        }
     }
     
     
