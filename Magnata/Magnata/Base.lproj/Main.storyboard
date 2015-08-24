@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nmi-ks-Gem">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -206,11 +206,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wf2-lK-ei9">
+                                <rect key="frame" x="0.0" y="71" width="310" height="30"/>
+                                <color key="backgroundColor" red="0.96687578910000005" green="0.45408660919999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Minhas">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="carteira:" destination="2aB-mK-cPb" eventType="touchUpInside" id="rFa-g0-esx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ru8-MO-46r">
+                                <rect key="frame" x="309" y="71" width="291" height="30"/>
+                                <color key="backgroundColor" red="0.96687578910000005" green="0.45408660919999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Pendente">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Pending:" destination="2aB-mK-cPb" eventType="touchUpInside" id="tt4-A5-mqR"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="I4n-9w-2FL">
                                 <rect key="frame" x="0.0" y="101" width="600" height="450"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="carteiraCell" rowHeight="54" id="rh5-ls-oLW" customClass="CarteiraCell" customModule="Magnata" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="carteiraCell" rowHeight="90" id="rh5-ls-oLW" customClass="CarteiraCell" customModule="Magnata" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rh5-ls-oLW" id="XpV-Gs-BSH">
@@ -243,6 +267,34 @@
                                                     <color key="textColor" red="0.0033972154610000002" green="0.42586016409999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gUM-YZ-Ou9">
+                                                    <rect key="frame" x="42" y="55" width="75" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8z-oR-M2l">
+                                                    <rect key="frame" x="125" y="59" width="22" height="22"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nv7-2h-gEe">
+                                                    <rect key="frame" x="8" y="59" width="22" height="22"/>
+                                                </button>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z3y-lO-VcO">
+                                                    <rect key="frame" x="189" y="55" width="75" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jS3-Ed-dgC">
+                                                    <rect key="frame" x="272" y="59" width="22" height="22"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Y3-3j-erZ">
+                                                    <rect key="frame" x="159" y="59" width="22" height="22"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOy-oO-I4H">
+                                                    <rect key="frame" x="308" y="55" width="70" height="30"/>
+                                                    <state key="normal" title="Comprar">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Zfi-6k-bU0" firstAttribute="top" secondItem="Nvk-GC-0I9" secondAttribute="bottom" constant="2" id="3sh-NB-7fv"/>
@@ -252,10 +304,17 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="buyButton" destination="XpV-Gs-BSH" id="z4w-rp-6Yo"/>
                                             <outlet property="quantidade" destination="ICC-I2-dIu" id="6iG-aS-64i"/>
+                                            <outlet property="quantityMinusButton" destination="XpV-Gs-BSH" id="Ui8-KN-yPz"/>
+                                            <outlet property="quantityPlusButton" destination="XpV-Gs-BSH" id="Xpq-7F-ec8"/>
+                                            <outlet property="quantityTextField" destination="gUM-YZ-Ou9" id="Okh-NM-Eoi"/>
                                             <outlet property="teamImage" destination="c5s-ZA-574" id="vow-tu-nPp"/>
                                             <outlet property="teamName" destination="4Py-bE-J2J" id="0fc-Xv-9D6"/>
                                             <outlet property="valor" destination="Nvk-GC-0I9" id="4SR-Ur-Pau"/>
+                                            <outlet property="valueMinusButton" destination="XpV-Gs-BSH" id="ekm-C8-x3j"/>
+                                            <outlet property="valuePlusButton" destination="XpV-Gs-BSH" id="kiE-4z-NdA"/>
+                                            <outlet property="valueTextField" destination="XpV-Gs-BSH" id="TJD-k6-8Nu"/>
                                             <outlet property="variacao" destination="Zfi-6k-bU0" id="dnk-C8-rla"/>
                                         </connections>
                                     </tableViewCell>
@@ -305,30 +364,6 @@
                                     <outlet property="delegate" destination="2aB-mK-cPb" id="hHq-zV-pBd"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wf2-lK-ei9">
-                                <rect key="frame" x="0.0" y="71" width="310" height="30"/>
-                                <color key="backgroundColor" red="0.96687578910000005" green="0.45408660919999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Minhas">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="carteira:" destination="2aB-mK-cPb" eventType="touchUpInside" id="rFa-g0-esx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ru8-MO-46r">
-                                <rect key="frame" x="309" y="71" width="291" height="30"/>
-                                <color key="backgroundColor" red="0.96687578910000005" green="0.45408660919999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Pendente">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="Pending:" destination="2aB-mK-cPb" eventType="touchUpInside" id="tt4-A5-mqR"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -572,6 +607,7 @@
                                             <outlet property="teamName" destination="Kjq-vW-eK6" id="4sy-ZZ-C0V"/>
                                             <outlet property="valor" destination="GN0-OM-bOF" id="Yyz-tb-cc0"/>
                                             <outlet property="variacao" destination="efK-FX-Bl0" id="A58-Um-CDk"/>
+                                            <segue destination="nmi-ks-Gem" kind="show" id="hqu-FJ-50E"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

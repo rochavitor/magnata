@@ -12,6 +12,7 @@ class ViewControllerCarteira: UIViewController, UITableViewDataSource, UITableVi
     
     var acoes = [Carteira]()
     var pending = false
+    var selectedIndexPath : NSIndexPath?
     
     @IBOutlet var tableView: UITableView!
     
@@ -121,11 +122,57 @@ class ViewControllerCarteira: UIViewController, UITableViewDataSource, UITableVi
     
     // MARK:  UITableViewDelegate Methods
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-        let row = indexPath.row
-        println(acoes[row].quantidade)
+        
+        // expansao da celula
+        let previousIndexPath = selectedIndexPath
+        if indexPath == selectedIndexPath {
+            selectedIndexPath = nil
+        }
+        else{
+            selectedIndexPath = indexPath
+        }
+        
+        var indexPaths : Array<NSIndexPath> = []
+        if let previous = previousIndexPath {
+            indexPaths += [previous]
+        }
+        if let current = selectedIndexPath {
+            indexPaths += [current]
+        }
+        if indexPaths.count > 0 {
+            tableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+        // fim expansao
+        
+        
+        
+//        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+//
+//        let row = indexPath.row
+//        println(acoes[row].quantidade)
     }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        (cell as! CarteiraCell).watchFrameChanges()
+    }
+
+    func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        (cell as! CarteiraCell).ignoreFrameChanges()
+    }
+
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        if indexPath == selectedIndexPath {
+            return CarteiraCell.expandedHeight
+        }
+        else{
+            return CarteiraCell.defaultHeight
+        }
+    }
+
+    
+    
     
     func StringToSigla(nome: NSString) -> NSString{
         switch(nome){

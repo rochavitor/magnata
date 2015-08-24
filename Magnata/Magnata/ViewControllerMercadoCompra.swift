@@ -16,9 +16,6 @@ class ViewControllerMercadoCompra: UIViewController, UITableViewDataSource, UITa
     var selectedIndexPath : NSIndexPath?
     
     
-    var cellTapped:Bool = true
-    var currentRow = 0;
-    
     @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -76,6 +73,7 @@ class ViewControllerMercadoCompra: UIViewController, UITableViewDataSource, UITa
     // MARK:  UITableViewDelegate Methods
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+        // expansao da celula
         let previousIndexPath = selectedIndexPath
         if indexPath == selectedIndexPath {
             selectedIndexPath = nil
@@ -94,6 +92,7 @@ class ViewControllerMercadoCompra: UIViewController, UITableViewDataSource, UITa
         if indexPaths.count > 0 {
             tableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Automatic)
         }
+        // fim expansao
         
         
 //        tableView.deselectRowAtIndexPath(indexPath, animated: true)
