@@ -10,7 +10,6 @@ import UIKit
 
 class Resultado {
     
-    
     var posicaoCasa: String!
     var timeCasa: String!
     var escudoCasa: String!
