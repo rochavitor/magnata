@@ -16,6 +16,7 @@ class CarteiraCell: UITableViewCell {
     @IBOutlet weak var valor: UILabel!
     @IBOutlet weak var variacao: UILabel!
     
+    @IBOutlet weak var grafico: UIImageView!
     @IBOutlet weak var buyButton: UIButton!
     
     @IBOutlet weak var quantityPlusButton: UIButton!
@@ -26,7 +27,7 @@ class CarteiraCell: UITableViewCell {
     @IBOutlet weak var valueMinusButton: UIButton!
     @IBOutlet weak var valueTextField: UITextField!
     
-    class var expandedHeight: CGFloat { get { return 100 } }
+    class var expandedHeight: CGFloat { get { return 250 } }
     class var defaultHeight:  CGFloat { get { return 60 } }
     
     func checkHeight() {
@@ -37,6 +38,7 @@ class CarteiraCell: UITableViewCell {
         valueTextField.hidden = (frame.size.height < CarteiraCell.expandedHeight)
         valueMinusButton.hidden = (frame.size.height < CarteiraCell.expandedHeight)
         valuePlusButton.hidden = (frame.size.height < CarteiraCell.expandedHeight)
+        grafico.hidden = (frame.size.height < CarteiraCell.expandedHeight)
         
         buyButton.hidden = (frame.size.height < CarteiraCell.expandedHeight)
     }

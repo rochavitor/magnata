@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>62F39BFA-5A82-48AA-9714-42360BDE6270</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Magnata</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>4A11EE9B81B923751597544F0CAD198EC3556361</key>
 		<string>https://github.com/rochavitor/magnata.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Magnata/Magnata.xcodeproj</string>
+	<string>Magnata/Magnata.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>4A11EE9B81B923751597544F0CAD198EC3556361</key>
