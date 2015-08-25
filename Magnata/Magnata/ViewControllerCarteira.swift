@@ -106,6 +106,8 @@ class ViewControllerCarteira: UIViewController, UITableViewDataSource, UITableVi
                 cell.variacao.text = "-" + String(format: "%.2f", (acoes[row].variacao as NSString).doubleValue)
             }
             
+            cell.buyButton.layer.cornerRadius = 6
+            
             return cell
         } else{
             let cell = tableView.dequeueReusableCellWithIdentifier("carteiraVendaCell", forIndexPath: indexPath) as! CarteiraVendaCell
