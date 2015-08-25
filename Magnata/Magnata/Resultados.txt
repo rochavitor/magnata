@@ -1,0 +1,105 @@
+{
+
+"Resultados": [
+{
+"Posição Casa" : "2",
+"Time Casa" : "Atlético MG",
+"Escudo Casa" : "CAM",
+"Placar Casa" : "2",
+"Placar Visitante" : "1",
+"Escudo Visitante" : "PAL",
+"Time Visitante" : "Palmeiras",
+"Posição Visitante" : "5"
+},
+{
+"Posição Casa" : "1",
+"Time Casa" : "Corinthians",
+"Escudo Casa" : "COR",
+"Placar Casa" : "3",
+"Placar Visitante" : "0",
+"Escudo Visitante" : "CRU",
+"Time Visitante" : "Cruzeiro",
+"Posição Visitante" : "15"
+},
+{
+"Posição Casa" : "11",
+"Time Casa" : "Santos",
+"Escudo Casa" : "SAN",
+"Placar Casa" : "5",
+"Placar Visitante" : "2",
+"Escudo Visitante" : "AVA",
+"Time Visitante" : "Avaí",
+"Posição Visitante" : "18"
+},
+{
+"Posição Casa" : "16",
+"Time Casa" : "Goiás",
+"Escudo Casa" : "GOI",
+"Placar Casa" : "3",
+"Placar Visitante" : "0",
+"Escudo Visitante" : "VAS",
+"Time Visitante" : "Vasco",
+"Posição Visitante" : "20"
+},
+{
+"Posição Casa" : "14",
+"Time Casa" : "Figueirense",
+"Escudo Casa" : "FIG",
+"Placar Casa" : "2",
+"Placar Visitante" : "1",
+"Escudo Visitante" : "SPO",
+"Time Visitante" : "Sport",
+"Posição Visitante" : "7"
+},
+{
+"Posição Casa" : "12",
+"Time Casa" : "Ponte Preta",
+"Escudo Casa" : "PON",
+"Placar Casa" : "0",
+"Placar Visitante" : "0",
+"Escudo Visitante" : "GRE",
+"Time Visitante" : "Grêmio",
+"Posição Visitante" : "3"
+},
+{
+"Posição Casa" : "17",
+"Time Casa" : "Coritiba",
+"Escudo Casa" : "CFC",
+"Placar Casa" : "1",
+"Placar Visitante" : "0",
+"Escudo Visitante" : "CHA",
+"Time Visitante" : "Chapecoense",
+"Posição Visitante" : "9"
+},
+{
+"Posição Casa" : "13",
+"Time Casa" : "Flamengo",
+"Escudo Casa" : "FLA",
+"Placar Casa" : "2",
+"Placar Visitante" : "1",
+"Escudo Visitante" : "SAO",
+"Time Visitante" : "São Paulo",
+"Posição Visitante" : "6"
+},
+{
+"Posição Casa" : "10",
+"Time Casa" : "Internacional",
+"Escudo Casa" : "INT",
+"Placar Casa" : "2",
+"Placar Visitante" : "0",
+"Escudo Visitante" : "CAP",
+"Time Visitante" : "Atlético PR",
+"Posição Visitante" : "8"
+},
+{
+"Posição Casa" : "19",
+"Time Casa" : "Joinville",
+"Escudo Casa" : "JOI",
+"Placar Casa" : "2",
+"Placar Visitante" : "1",
+"Escudo Visitante" : "FLU",
+"Time Visitante" : "Fluminense",
+"Posição Visitante" : "4"
+}
+]
+}
