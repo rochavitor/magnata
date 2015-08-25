@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		22D77B9A1B8794EF00224455 /* MercadoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D77B991B8794EF00224455 /* MercadoCell.swift */; };
-		22D77B9C1B87975200224455 /* ViewControllerMercado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D77B9B1B87975200224455 /* ViewControllerMercado.swift */; };
+		22D77B9C1B87975200224455 /* MercadoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D77B9B1B87975200224455 /* MercadoVC.swift */; };
 		22D77B9E1B87A69000224455 /* MercadoCompraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D77B9D1B87A69000224455 /* MercadoCompraCell.swift */; };
-		22D77BA01B87A75400224455 /* ViewControllerMercadoCompra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D77B9F1B87A75400224455 /* ViewControllerMercadoCompra.swift */; };
+		22D77BA01B87A75400224455 /* MercadoCompraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D77B9F1B87A75400224455 /* MercadoCompraVC.swift */; };
 		22EE02491B8645DD00AF5FD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EE02481B8645DD00AF5FD5 /* AppDelegate.swift */; };
 		22EE024B1B8645DD00AF5FD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EE024A1B8645DD00AF5FD5 /* ViewController.swift */; };
 		22EE024E1B8645DD00AF5FD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22EE024C1B8645DD00AF5FD5 /* Main.storyboard */; };
@@ -23,9 +23,9 @@
 		A784CAD01B8698C40059C18A /* CarteiraVenda.json in Resources */ = {isa = PBXBuildFile; fileRef = A784CACF1B8698C40059C18A /* CarteiraVenda.json */; };
 		A784CAD21B86994E0059C18A /* MercadoCompraAcoes.json in Resources */ = {isa = PBXBuildFile; fileRef = A784CAD11B86994E0059C18A /* MercadoCompraAcoes.json */; };
 		A784CAD41B869D400059C18A /* CarteiraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784CAD31B869D400059C18A /* CarteiraCell.swift */; };
-		A784CAD61B86A1D30059C18A /* ViewControllerCarteira.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784CAD51B86A1D30059C18A /* ViewControllerCarteira.swift */; };
+		A784CAD61B86A1D30059C18A /* CarteiraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784CAD51B86A1D30059C18A /* CarteiraVC.swift */; };
 		A784CADA1B87A05B0059C18A /* CarteiraVendaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784CAD91B87A05B0059C18A /* CarteiraVendaCell.swift */; };
-		FF3B4EF21B8BFDF700ABFB0C /* ViewControllerResultados.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3B4EF11B8BFDF700ABFB0C /* ViewControllerResultados.swift */; };
+		FF3B4EF21B8BFDF700ABFB0C /* ResultadosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3B4EF11B8BFDF700ABFB0C /* ResultadosVC.swift */; };
 		FF3B4EF41B8BFEC500ABFB0C /* ResultadosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3B4EF31B8BFEC500ABFB0C /* ResultadosCell.swift */; };
 		FF3B4EF61B8C118600ABFB0C /* ReadJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3B4EF51B8C118600ABFB0C /* ReadJson.swift */; };
 		FF3B4EF81B8C11B500ABFB0C /* Resultados.txt in Resources */ = {isa = PBXBuildFile; fileRef = FF3B4EF71B8C11B500ABFB0C /* Resultados.txt */; };
@@ -44,9 +44,9 @@
 
 /* Begin PBXFileReference section */
 		22D77B991B8794EF00224455 /* MercadoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MercadoCell.swift; sourceTree = "<group>"; };
-		22D77B9B1B87975200224455 /* ViewControllerMercado.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMercado.swift; sourceTree = "<group>"; };
+		22D77B9B1B87975200224455 /* MercadoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MercadoVC.swift; sourceTree = "<group>"; };
 		22D77B9D1B87A69000224455 /* MercadoCompraCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MercadoCompraCell.swift; sourceTree = "<group>"; };
-		22D77B9F1B87A75400224455 /* ViewControllerMercadoCompra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMercadoCompra.swift; sourceTree = "<group>"; };
+		22D77B9F1B87A75400224455 /* MercadoCompraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MercadoCompraVC.swift; sourceTree = "<group>"; };
 		22EE02431B8645DD00AF5FD5 /* Magnata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magnata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22EE02471B8645DD00AF5FD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22EE02481B8645DD00AF5FD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,9 +63,9 @@
 		A784CACF1B8698C40059C18A /* CarteiraVenda.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CarteiraVenda.json; sourceTree = "<group>"; };
 		A784CAD11B86994E0059C18A /* MercadoCompraAcoes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MercadoCompraAcoes.json; sourceTree = "<group>"; };
 		A784CAD31B869D400059C18A /* CarteiraCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarteiraCell.swift; sourceTree = "<group>"; };
-		A784CAD51B86A1D30059C18A /* ViewControllerCarteira.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerCarteira.swift; sourceTree = "<group>"; };
+		A784CAD51B86A1D30059C18A /* CarteiraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarteiraVC.swift; sourceTree = "<group>"; };
 		A784CAD91B87A05B0059C18A /* CarteiraVendaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarteiraVendaCell.swift; sourceTree = "<group>"; };
-		FF3B4EF11B8BFDF700ABFB0C /* ViewControllerResultados.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerResultados.swift; sourceTree = "<group>"; };
+		FF3B4EF11B8BFDF700ABFB0C /* ResultadosVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultadosVC.swift; sourceTree = "<group>"; };
 		FF3B4EF31B8BFEC500ABFB0C /* ResultadosCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultadosCell.swift; sourceTree = "<group>"; };
 		FF3B4EF51B8C118600ABFB0C /* ReadJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadJson.swift; sourceTree = "<group>"; };
 		FF3B4EF71B8C11B500ABFB0C /* Resultados.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Resultados.txt; sourceTree = "<group>"; };
@@ -149,11 +149,11 @@
 		FF3B4EEE1B8BFD6C00ABFB0C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A784CAD51B86A1D30059C18A /* ViewControllerCarteira.swift */,
+				A784CAD51B86A1D30059C18A /* CarteiraVC.swift */,
 				22EE024A1B8645DD00AF5FD5 /* ViewController.swift */,
-				22D77B9B1B87975200224455 /* ViewControllerMercado.swift */,
-				22D77B9F1B87A75400224455 /* ViewControllerMercadoCompra.swift */,
-				FF3B4EF11B8BFDF700ABFB0C /* ViewControllerResultados.swift */,
+				22D77B9B1B87975200224455 /* MercadoVC.swift */,
+				22D77B9F1B87A75400224455 /* MercadoCompraVC.swift */,
+				FF3B4EF11B8BFDF700ABFB0C /* ResultadosVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -292,17 +292,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF3B4EF21B8BFDF700ABFB0C /* ViewControllerResultados.swift in Sources */,
+				FF3B4EF21B8BFDF700ABFB0C /* ResultadosVC.swift in Sources */,
 				FF3B4EF41B8BFEC500ABFB0C /* ResultadosCell.swift in Sources */,
-				22D77BA01B87A75400224455 /* ViewControllerMercadoCompra.swift in Sources */,
-				22D77B9C1B87975200224455 /* ViewControllerMercado.swift in Sources */,
+				22D77BA01B87A75400224455 /* MercadoCompraVC.swift in Sources */,
+				22D77B9C1B87975200224455 /* MercadoVC.swift in Sources */,
 				A784CAD41B869D400059C18A /* CarteiraCell.swift in Sources */,
 				22D77B9E1B87A69000224455 /* MercadoCompraCell.swift in Sources */,
 				A784CACB1B86976C0059C18A /* SwiftyJSON.swift in Sources */,
 				A784CADA1B87A05B0059C18A /* CarteiraVendaCell.swift in Sources */,
 				22EE024B1B8645DD00AF5FD5 /* ViewController.swift in Sources */,
 				22D77B9A1B8794EF00224455 /* MercadoCell.swift in Sources */,
-				A784CAD61B86A1D30059C18A /* ViewControllerCarteira.swift in Sources */,
+				A784CAD61B86A1D30059C18A /* CarteiraVC.swift in Sources */,
 				FF3B4EF61B8C118600ABFB0C /* ReadJson.swift in Sources */,
 				22EE02491B8645DD00AF5FD5 /* AppDelegate.swift in Sources */,
 				FF3B4EFA1B8C166E00ABFB0C /* Resultado.swift in Sources */,

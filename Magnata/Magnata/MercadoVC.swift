@@ -9,7 +9,7 @@
 
 import UIKit
 
-class ViewControllerMercado: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class MercadoVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     var acoes = [Mercado]()
     

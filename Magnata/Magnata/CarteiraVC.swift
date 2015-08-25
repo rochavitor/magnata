@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewControllerCarteira: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     var acoes = [Carteira]()
     var pending = false

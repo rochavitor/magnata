@@ -19,4 +19,13 @@ class Resultado {
     var timeVisitante: String!
     var posicaoVisitante: String!
     
+    init(posicaoCasa:String, escudoCasa: String, placarCasa: String, placarVisitante: String, escudoVisitante: String, posicaoVisitante: String) {
+        self.posicaoCasa = posicaoCasa
+        self.escudoCasa = escudoCasa
+        self.placarCasa = placarCasa
+        self.placarVisitante = placarVisitante
+        self.escudoVisitante = escudoVisitante
+        self.posicaoVisitante = posicaoVisitante
+    }
+    
 }

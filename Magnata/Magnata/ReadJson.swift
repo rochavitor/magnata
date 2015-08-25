@@ -27,23 +27,13 @@ class ReadJson {
  
             //Create Alimentos and pass to context
             for buildArray in games {
+            
+                resultados.append(Resultado(posicaoCasa: (buildArray.objectForKey("Posição Casa")) as! String, escudoCasa: (buildArray.objectForKey("Escudo Casa")) as! String, placarCasa: (buildArray.objectForKey("Placar Casa")) as! String, placarVisitante: (buildArray.objectForKey("Placar Visitante")) as! String, escudoVisitante: (buildArray.objectForKey("Escudo Visitante")) as! String, posicaoVisitante: (buildArray.objectForKey("Posição Visitante")) as! String))
                 
-                var resultado = Resultado()
-                
-                resultado.posicaoCasa = (buildArray.objectForKey("Posição Casa")) as! String
-                resultado.timeCasa = (buildArray.objectForKey("Time Casa")) as! String
-                resultado.escudoCasa = (buildArray.objectForKey("Escudo Casa")) as! String
-                resultado.placarCasa = (buildArray.objectForKey("Placar Casa")) as! String
-                resultado.posicaoVisitante = (buildArray.objectForKey("Posição Visitante")) as! String
-                resultado.timeVisitante = (buildArray.objectForKey("Time Visitante")) as! String
-                resultado.escudoVisitante = (buildArray.objectForKey("Escudo Visitante")) as! String
-                resultado.placarVisitante = (buildArray.objectForKey("Placar Visitante")) as! String
-                
-                
-                resultados.append(resultado)
             }
         
         return resultados
     }
+    
     
 }

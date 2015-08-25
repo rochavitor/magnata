@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewControllerResultados: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class ResultadosVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     var resultados = Array<Resultado>()
     let json = ReadJson()
@@ -48,10 +48,13 @@ class ViewControllerResultados: UIViewController, UITableViewDataSource, UITable
         let row = indexPath.row
         
         cell.posicaoCasa.text = resultados[row].posicaoCasa
-        cell.timeCasa.text = resultados[row].timeCasa
+        cell.timeCasa.text = resultados[row].escudoCasa
+        cell.placarCasa.text = resultados[row].placarCasa
         cell.escudoCasa.image = UIImage(named: resultados[row].escudoCasa)
+        
+        cell.placarVisitante.text = resultados[row].placarVisitante
         cell.posicaoVisitante.text = resultados[row].posicaoVisitante
-        cell.timeVisitante.text = resultados[row].timeVisitante
+        cell.timeVisitante.text = resultados[row].escudoVisitante
         cell.escudoVisitante.image = UIImage(named: resultados[row].escudoVisitante)
         
         cell.backgroundColor = UIColor.clearColor()
