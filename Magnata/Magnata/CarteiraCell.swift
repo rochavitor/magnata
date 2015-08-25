@@ -26,8 +26,8 @@ class CarteiraCell: UITableViewCell {
     @IBOutlet weak var valueMinusButton: UIButton!
     @IBOutlet weak var valueTextField: UITextField!
     
-    class var expandedHeight: CGFloat { get { return 90 } }
-    class var defaultHeight:  CGFloat { get { return 54 } }
+    class var expandedHeight: CGFloat { get { return 100 } }
+    class var defaultHeight:  CGFloat { get { return 60 } }
     
     func checkHeight() {
         quantityTextField.hidden = (frame.size.height < CarteiraCell.expandedHeight)
