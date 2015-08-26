@@ -65,7 +65,11 @@ class MercadoCompraVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         cell.username.text = acoes[row].username
         cell.quantidade.text = acoes[row].quantidade + " ações"
         cell.valor.text = "R$ " + String(format: "%.2f", (acoes[row].valor as NSString).doubleValue)
-        cell.buyButton.layer.cornerRadius = 6  
+        cell.buyButton.layer.cornerRadius = 6
+        
+        cell.qtdCompraTextField.text = acoes[row].quantidade
+
+        
         
         return cell
     }
