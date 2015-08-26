@@ -16,6 +16,8 @@ class CarteiraCell: UITableViewCell {
     @IBOutlet weak var valor: UILabel!
     @IBOutlet weak var variacao: UILabel!
     
+    @IBOutlet weak var valueTexto: UILabel!
+    @IBOutlet weak var qntd: UILabel!
     @IBOutlet weak var grafico: UIImageView!
     @IBOutlet weak var buyButton: UIButton!
     
@@ -32,13 +34,16 @@ class CarteiraCell: UITableViewCell {
     
     func checkHeight() {
         quantityTextField.hidden = (frame.size.height < CarteiraCell.expandedHeight)
-        quantityMinusButton.hidden = (frame.size.height < CarteiraCell.expandedHeight)
-        quantityPlusButton.hidden = (frame.size.height < CarteiraCell.expandedHeight)
+        //quantityMinusButton.hidden = (frame.size.height < CarteiraCell.expandedHeight)
+        //quantityPlusButton.hidden = (frame.size.height < CarteiraCell.expandedHeight)
         
         valueTextField.hidden = (frame.size.height < CarteiraCell.expandedHeight)
-        valueMinusButton.hidden = (frame.size.height < CarteiraCell.expandedHeight)
-        valuePlusButton.hidden = (frame.size.height < CarteiraCell.expandedHeight)
+        //valueMinusButton.hidden = (frame.size.height < CarteiraCell.expandedHeight)
+        //valuePlusButton.hidden = (frame.size.height < CarteiraCell.expandedHeight)
         grafico.hidden = (frame.size.height < CarteiraCell.expandedHeight)
+        
+        valueTexto.hidden = (frame.size.height < CarteiraCell.expandedHeight)
+        qntd.hidden = (frame.size.height < CarteiraCell.expandedHeight)
         
         buyButton.hidden = (frame.size.height < CarteiraCell.expandedHeight)
     }

@@ -112,7 +112,7 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
             }
             
             cell.quantityTextField.text = acoes[row].quantidade
-            cell.valueTextField.text = String(format: "%.2f", (acoes[row].valor as NSString).doubleValue)
+            cell.valueTextField.text = "R$ " + String(format: "%.2f", (acoes[row].valor as NSString).doubleValue)
             cell.backgroundColor = UIColor.clearColor()
             cell.selectionStyle = .None
             
