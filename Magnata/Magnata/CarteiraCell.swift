@@ -34,35 +34,5 @@ class CarteiraCell: UITableViewCell {
     class var expandedHeight: CGFloat { get { return 280 } }
     class var defaultHeight:  CGFloat { get { return 60 } }
     
-    func checkHeight() {
-        quantityTextField.hidden = (frame.size.height < CarteiraCell.expandedHeight)
-        //quantityMinusButton.hidden = (frame.size.height < CarteiraCell.expandedHeight)
-        //quantityPlusButton.hidden = (frame.size.height < CarteiraCell.expandedHeight)
-        
-        valueTextField.hidden = (frame.size.height < CarteiraCell.expandedHeight)
-        //valueMinusButton.hidden = (frame.size.height < CarteiraCell.expandedHeight)
-        //valuePlusButton.hidden = (frame.size.height < CarteiraCell.expandedHeight)
-        grafico.hidden = (frame.size.height < CarteiraCell.expandedHeight)
-        
-        valueTexto.hidden = (frame.size.height < CarteiraCell.expandedHeight)
-        qntd.hidden = (frame.size.height < CarteiraCell.expandedHeight)
-        
-        buyButton.hidden = (frame.size.height < CarteiraCell.expandedHeight)
-    }
     
-    func watchFrameChanges() {
-        addObserver(self, forKeyPath: "frame", options: .New, context: nil)
-        checkHeight()
-    }
-    
-    func ignoreFrameChanges() {
-        removeObserver(self, forKeyPath: "frame")
-    }
-    
-    override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
-        if keyPath == "frame" {
-            checkHeight()
-        }
-    }
-
-}
+ }

@@ -147,53 +147,17 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     // MARK:  UITableViewDelegate Methods
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        if !pending{
-        // expansao da celula
-        let previousIndexPath = selectedIndexPath
-        if indexPath == selectedIndexPath {
-            selectedIndexPath = nil
-        }
-        else{
-            selectedIndexPath = indexPath
-        }
+        selectedIndexPath = indexPath
         
-        var indexPaths : Array<NSIndexPath> = []
-        if let previous = previousIndexPath {
-            indexPaths += [previous]
-        }
-        if let current = selectedIndexPath {
-            indexPaths += [current]
-        }
-        if indexPaths.count > 0 {
-            tableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Automatic)
-        }
-        // fim expansao
-        }
-        
-        
-        
+        tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+       
 //        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-//
-//        let row = indexPath.row
-//        println(acoes[row].quantidade)
+
+        let row = indexPath.row
+        println(acoes[row].quantidade)
     }
     
-    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        if !pending {
-            (cell as! CarteiraCell).watchFrameChanges()
-        } else{
-
-        }
-    }
-
-    func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        if !pending {
-            (cell as! CarteiraCell).ignoreFrameChanges()
-        } else{
-
-        }
-        
-    }
+    
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
 

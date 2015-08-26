@@ -65,18 +65,7 @@ class MercadoCompraVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         cell.username.text = acoes[row].username
         cell.quantidade.text = acoes[row].quantidade + " ações"
         cell.valor.text = "R$ " + String(format: "%.2f", (acoes[row].valor as NSString).doubleValue)
-        cell.buyButton.layer.cornerRadius = 6
-        cell.isSelected = false
-
-        
-        // hidden para expansao
-//        cell.quantityPlusButton.hidden = true
-//        cell.quantityMinusButton.hidden = true
-//        cell.qtdCompraTextField.hidden = true
-//        cell.totalQuantityLabel.hidden = true
-//        cell.buyButton.hidden = true
-        
-        
+        cell.buyButton.layer.cornerRadius = 6  
         
         return cell
     }
@@ -86,16 +75,6 @@ class MercadoCompraVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         selectedIndexPath = indexPath
-        
-        
-        //let cell = tableView.dequeueReusableCellWithIdentifier("mercadoCompraCell", forIndexPath: indexPath) as! MercadoCompraCell
-        var cell = tableView.cellForRowAtIndexPath(indexPath) as! MercadoCompraCell
-
-//        cell.quantityPlusButton.hidden = false
-//        cell.quantityMinusButton.hidden = false
-//        cell.qtdCompraTextField.hidden = false
-//        cell.buyButton.hidden = false
-
         
         tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
         
