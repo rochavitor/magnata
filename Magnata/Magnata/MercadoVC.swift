@@ -68,9 +68,11 @@ class MercadoVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         cell.teamName.text = acoes[row].name
         cell.valor.text = "R$ " + String(format: "%.2f", (acoes[row].valor as NSString).doubleValue)
         if (acoes[row].variacao as NSString).floatValue >= 0{
+            cell.variacao.textColor = UIColor.greenColor()
             cell.variacao.text = "+" + String(format: "%.2f", (acoes[row].variacao as NSString).doubleValue)
         } else {
-            cell.variacao.text = "-" + String(format: "%.2f", (acoes[row].variacao as NSString).doubleValue)
+            cell.variacao.textColor = UIColor.redColor()
+            cell.variacao.text = String(format: "%.2f", (acoes[row].variacao as NSString).doubleValue)
         }
         
         cell.backgroundColor = UIColor.clearColor()

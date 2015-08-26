@@ -14,4 +14,5 @@ class CarteiraVendaCell: UITableViewCell {
     @IBOutlet weak var teamName: UILabel!
     @IBOutlet weak var quantidade: UILabel!
     @IBOutlet weak var valor: UILabel!
+    
 }
