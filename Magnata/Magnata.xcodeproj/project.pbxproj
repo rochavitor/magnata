@@ -17,6 +17,7 @@
 		22EE02501B8645DD00AF5FD5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22EE024F1B8645DD00AF5FD5 /* Images.xcassets */; };
 		22EE02531B8645DD00AF5FD5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22EE02511B8645DD00AF5FD5 /* LaunchScreen.xib */; };
 		22EE025F1B8645DD00AF5FD5 /* MagnataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EE025E1B8645DD00AF5FD5 /* MagnataTests.swift */; };
+		A72BFC761B8D35FB000ED5EE /* MercadoCompraTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72BFC751B8D35FB000ED5EE /* MercadoCompraTimeCell.swift */; };
 		A784CACB1B86976C0059C18A /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784CAC91B86976C0059C18A /* SwiftyJSON.swift */; };
 		A784CACC1B86976C0059C18A /* MercadoAcoes.json in Resources */ = {isa = PBXBuildFile; fileRef = A784CACA1B86976C0059C18A /* MercadoAcoes.json */; };
 		A784CACE1B8698170059C18A /* Carteira.json in Resources */ = {isa = PBXBuildFile; fileRef = A784CACD1B8698170059C18A /* Carteira.json */; };
@@ -57,6 +58,7 @@
 		22EE02581B8645DD00AF5FD5 /* MagnataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagnataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22EE025D1B8645DD00AF5FD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22EE025E1B8645DD00AF5FD5 /* MagnataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnataTests.swift; sourceTree = "<group>"; };
+		A72BFC751B8D35FB000ED5EE /* MercadoCompraTimeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MercadoCompraTimeCell.swift; sourceTree = "<group>"; };
 		A784CAC91B86976C0059C18A /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		A784CACA1B86976C0059C18A /* MercadoAcoes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MercadoAcoes.json; sourceTree = "<group>"; };
 		A784CACD1B8698170059C18A /* Carteira.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Carteira.json; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				A784CAD91B87A05B0059C18A /* CarteiraVendaCell.swift */,
 				22D77B991B8794EF00224455 /* MercadoCell.swift */,
 				22D77B9D1B87A69000224455 /* MercadoCompraCell.swift */,
+				A72BFC751B8D35FB000ED5EE /* MercadoCompraTimeCell.swift */,
 				FF3B4EF31B8BFEC500ABFB0C /* ResultadosCell.swift */,
 				22EE024C1B8645DD00AF5FD5 /* Main.storyboard */,
 				22EE02511B8645DD00AF5FD5 /* LaunchScreen.xib */,
@@ -302,6 +305,7 @@
 				A784CADA1B87A05B0059C18A /* CarteiraVendaCell.swift in Sources */,
 				22EE024B1B8645DD00AF5FD5 /* ViewController.swift in Sources */,
 				22D77B9A1B8794EF00224455 /* MercadoCell.swift in Sources */,
+				A72BFC761B8D35FB000ED5EE /* MercadoCompraTimeCell.swift in Sources */,
 				A784CAD61B86A1D30059C18A /* CarteiraVC.swift in Sources */,
 				FF3B4EF61B8C118600ABFB0C /* ReadJson.swift in Sources */,
 				22EE02491B8645DD00AF5FD5 /* AppDelegate.swift in Sources */,

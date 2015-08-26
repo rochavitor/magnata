@@ -27,7 +27,7 @@ class CarteiraCell: UITableViewCell {
     @IBOutlet weak var valueMinusButton: UIButton!
     @IBOutlet weak var valueTextField: UITextField!
     
-    class var expandedHeight: CGFloat { get { return 250 } }
+    class var expandedHeight: CGFloat { get { return 280 } }
     class var defaultHeight:  CGFloat { get { return 60 } }
     
     func checkHeight() {

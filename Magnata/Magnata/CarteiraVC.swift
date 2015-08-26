@@ -92,6 +92,7 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
+        
         let row = indexPath.row
         
         if !pending {
@@ -101,10 +102,19 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
             cell.quantidade.text = acoes[row].quantidade + " ações"
             cell.valor.text = "R$ " + String(format: "%.2f", (acoes[row].valor as NSString).doubleValue)
             if (acoes[row].variacao as NSString).floatValue >= 0{
-                cell.variacao.text = "+" + String(format: "%.2f", (acoes[row].variacao as NSString).doubleValue)
+                //cell.variacao.textColor = UIColor(red: 34.0, green: 246.0, blue: 22.0, alpha: 1.0)
+                cell.variacao.textColor = UIColor.greenColor()
+                cell.variacao.text = "+" + String(format: "%.2f", (acoes[row].variacao as NSString).doubleValue) + "%"
             } else {
-                cell.variacao.text = "-" + String(format: "%.2f", (acoes[row].variacao as NSString).doubleValue)
+                //cell.variacao.textColor = UIColor(red: 255, green: 43, blue: 57, alpha: 1.0)
+                cell.variacao.textColor = UIColor.redColor()
+                cell.variacao.text = String(format: "%.2f", (acoes[row].variacao as NSString).doubleValue) + "%"
             }
+            
+            cell.quantityTextField.text = acoes[row].quantidade
+            cell.valueTextField.text = String(format: "%.2f", (acoes[row].valor as NSString).doubleValue)
+            cell.backgroundColor = UIColor.clearColor()
+            cell.selectionStyle = .None
             
             cell.buyButton.layer.cornerRadius = 6
             
@@ -115,6 +125,8 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
             cell.teamName.text = acoes[row].name
             cell.valor.text = "R$ " + String(format: "%.2f", (acoes[row].valor as NSString).doubleValue)
             cell.quantidade.text = acoes[row].quantidade + " ações"
+            cell.backgroundColor = UIColor.clearColor()
+            cell.selectionStyle = .None
             
             return cell
         }
@@ -122,10 +134,20 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         
     }
     
+    func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
+        let cell  = tableView.cellForRowAtIndexPath(indexPath)
+        cell!.contentView.backgroundColor = .clearColor()
+    }
+    
+    func tableView(tableView: UITableView, didUnhighlightRowAtIndexPath indexPath: NSIndexPath) {
+        let cell  = tableView.cellForRowAtIndexPath(indexPath)
+        cell!.contentView.backgroundColor = .clearColor()
+    }
+    
     // MARK:  UITableViewDelegate Methods
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        
+        if !pending{
         // expansao da celula
         let previousIndexPath = selectedIndexPath
         if indexPath == selectedIndexPath {
@@ -146,6 +168,7 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
             tableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Automatic)
         }
         // fim expansao
+        }
         
         
         
@@ -156,21 +179,31 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        (cell as! CarteiraCell).watchFrameChanges()
+        if !pending {
+            (cell as! CarteiraCell).watchFrameChanges()
+        } else{
+
+        }
     }
 
     func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        (cell as! CarteiraCell).ignoreFrameChanges()
+        if !pending {
+            (cell as! CarteiraCell).ignoreFrameChanges()
+        } else{
+
+        }
+        
     }
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        
+
         if indexPath == selectedIndexPath {
             return CarteiraCell.expandedHeight
         }
         else{
             return CarteiraCell.defaultHeight
         }
+
     }
 
     
