@@ -66,59 +66,55 @@ class MercadoCompraVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         cell.quantidade.text = acoes[row].quantidade + " ações"
         cell.valor.text = "R$ " + String(format: "%.2f", (acoes[row].valor as NSString).doubleValue)
         cell.buyButton.layer.cornerRadius = 6
+        cell.isSelected = false
+
+        
+        // hidden para expansao
+//        cell.quantityPlusButton.hidden = true
+//        cell.quantityMinusButton.hidden = true
+//        cell.qtdCompraTextField.hidden = true
+//        cell.totalQuantityLabel.hidden = true
+//        cell.buyButton.hidden = true
+        
         
         
         return cell
     }
     
+    
     // MARK:  UITableViewDelegate Methods
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        // expansao da celula
-        let previousIndexPath = selectedIndexPath
-        if indexPath == selectedIndexPath {
-            selectedIndexPath = nil
-        }
-        else{
-            selectedIndexPath = indexPath
-        }
+        selectedIndexPath = indexPath
         
-        var indexPaths : Array<NSIndexPath> = []
-        if let previous = previousIndexPath {
-            indexPaths += [previous]
-        }
-        if let current = selectedIndexPath {
-            indexPaths += [current]
-        }
-        if indexPaths.count > 0 {
-            tableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Automatic)
-        }
-        // fim expansao
         
+        //let cell = tableView.dequeueReusableCellWithIdentifier("mercadoCompraCell", forIndexPath: indexPath) as! MercadoCompraCell
+        var cell = tableView.cellForRowAtIndexPath(indexPath) as! MercadoCompraCell
+
+//        cell.quantityPlusButton.hidden = false
+//        cell.quantityMinusButton.hidden = false
+//        cell.qtdCompraTextField.hidden = false
+//        cell.buyButton.hidden = false
+
+        
+        tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
         
 //        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-//
-//        let row = indexPath.row
-        //println(acoes[row].quantidade)
-    }
-    
-    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        (cell as! MercadoCompraCell).watchFrameChanges()
-    }
-    
-    func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        (cell as! MercadoCompraCell).ignoreFrameChanges()
+        
+        let row = indexPath.row
+        println(acoes[row].quantidade)
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
-        if indexPath == selectedIndexPath {
+    if indexPath == selectedIndexPath {
             return MercadoCompraCell.expandedHeight
         }
         else{
             return MercadoCompraCell.defaultHeight
         }
     }
+    
     
     
     func StringToSigla(nome: NSString) -> NSString{
