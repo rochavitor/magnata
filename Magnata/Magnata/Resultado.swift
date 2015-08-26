@@ -11,12 +11,12 @@ import UIKit
 class Resultado {
     
     var posicaoCasa: String!
-    var timeCasa: String!
+//    var timeCasa: String!
     var escudoCasa: String!
     var placarCasa: String!
     var placarVisitante: String!
     var escudoVisitante: String!
-    var timeVisitante: String!
+//    var timeVisitante: String!
     var posicaoVisitante: String!
     
     init(posicaoCasa:String, escudoCasa: String, placarCasa: String, placarVisitante: String, escudoVisitante: String, posicaoVisitante: String) {
