@@ -14,6 +14,7 @@ class MercadoCompraVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     var acoes = [MercadoCompra]()
     
     var selectedIndexPath : NSIndexPath?
+    var selectedRow = -1
     
     
     @IBOutlet var tableView: UITableView!
@@ -69,9 +70,20 @@ class MercadoCompraVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         
         cell.qtdCompraTextField.text = acoes[row].quantidade
 
-        
+        cell.backgroundColor = UIColor.clearColor()
+        cell.selectionStyle = .None
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
+        let cell  = tableView.cellForRowAtIndexPath(indexPath)
+        cell!.contentView.backgroundColor = .clearColor()
+    }
+    
+    func tableView(tableView: UITableView, didUnhighlightRowAtIndexPath indexPath: NSIndexPath) {
+        let cell  = tableView.cellForRowAtIndexPath(indexPath)
+        cell!.contentView.backgroundColor = .clearColor()
     }
     
     
@@ -85,17 +97,27 @@ class MercadoCompraVC: UIViewController, UITableViewDataSource, UITableViewDeleg
 //        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         let row = indexPath.row
+        if row == selectedRow{
+            selectedRow = -1
+        } else{
+            selectedRow = row
+        }
         println(acoes[row].quantidade)
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
-    if indexPath == selectedIndexPath {
-            return MercadoCompraCell.expandedHeight
+        if indexPath == selectedIndexPath {
+            if selectedRow == indexPath.row {
+                return MercadoCompraCell.defaultHeight
+            } else{
+                return MercadoCompraCell.expandedHeight
+            }
         }
         else{
             return MercadoCompraCell.defaultHeight
         }
+        
     }
     
     

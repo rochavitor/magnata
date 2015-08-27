@@ -13,7 +13,10 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     var acoes = [Carteira]()
     var pending = false
     var selectedIndexPath : NSIndexPath?
+    var selectedRow = -1
     
+    @IBOutlet weak var minhas: UIButton!
+    @IBOutlet weak var pendente: UIButton!
     @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -28,11 +31,19 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     }
     
     @IBAction func carteira(sender: AnyObject) {
+        minhas.backgroundColor = UIColor.darkGrayColor()
+        pendente.backgroundColor = UIColor.lightGrayColor()
+        selectedRow = -1
+        selectedIndexPath = NSIndexPath()
         pending = false
         loadTeams()
     }
     @IBAction func Pending(sender: AnyObject) {
+        minhas.backgroundColor = UIColor.lightGrayColor()
+        pendente.backgroundColor = UIColor.darkGrayColor()
         pending = true
+        selectedRow = -1
+        selectedIndexPath = NSIndexPath()
         loadPending()
     }
     
@@ -154,6 +165,11 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
 //        tableView.deselectRowAtIndexPath(indexPath, animated: true)
 
         let row = indexPath.row
+        if row == selectedRow{
+            selectedRow = -1
+        } else{
+            selectedRow = row
+        }
         println(acoes[row].quantidade)
     }
     
@@ -162,7 +178,11 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
 
         if indexPath == selectedIndexPath {
-            return CarteiraCell.expandedHeight
+            if selectedRow == indexPath.row {
+                return CarteiraCell.defaultHeight
+            } else{
+                return CarteiraCell.expandedHeight
+            }
         }
         else{
             return CarteiraCell.defaultHeight

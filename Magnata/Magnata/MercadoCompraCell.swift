@@ -16,10 +16,6 @@ class MercadoCompraCell: UITableViewCell {
     @IBOutlet weak var qtdCompraTextField: UITextField!
     
     @IBOutlet weak var buyButton: UIButton!
-    @IBOutlet weak var quantityMinusButton: UIButton!
-    @IBOutlet weak var quantityPlusButton: UIButton!
-
-    @IBOutlet weak var totalQuantityLabel: UILabel!
     
     
     class var expandedHeight: CGFloat { get { return 100 } }

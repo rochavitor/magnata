@@ -60,6 +60,16 @@ class MercadoVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         return acoes.count
     }
     
+    func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
+        let cell  = tableView.cellForRowAtIndexPath(indexPath)
+        cell!.contentView.backgroundColor = .clearColor()
+    }
+    
+    func tableView(tableView: UITableView, didUnhighlightRowAtIndexPath indexPath: NSIndexPath) {
+        let cell  = tableView.cellForRowAtIndexPath(indexPath)
+        cell!.contentView.backgroundColor = .clearColor()
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("mercadoCell", forIndexPath: indexPath) as! MercadoCell
         
@@ -69,13 +79,14 @@ class MercadoVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         cell.valor.text = "R$ " + String(format: "%.2f", (acoes[row].valor as NSString).doubleValue)
         if (acoes[row].variacao as NSString).floatValue >= 0{
             cell.variacao.textColor = UIColor.greenColor()
-            cell.variacao.text = "+" + String(format: "%.2f", (acoes[row].variacao as NSString).doubleValue)
+            cell.variacao.text = "+" + String(format: "%.2f", (acoes[row].variacao as NSString).doubleValue) + "%"
         } else {
             cell.variacao.textColor = UIColor.redColor()
-            cell.variacao.text = String(format: "%.2f", (acoes[row].variacao as NSString).doubleValue)
+            cell.variacao.text = String(format: "%.2f", (acoes[row].variacao as NSString).doubleValue) + "%"
         }
         
         cell.backgroundColor = UIColor.clearColor()
+        cell.selectionStyle = .None
         
         return cell
     }
