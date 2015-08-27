@@ -134,6 +134,36 @@ class MercadoCompraVC: UIViewController, UITableViewDataSource, UITableViewDeleg
             return "CRU"
         case "Santos":
             return "SAN"
+        case "Flamengo":
+            return "FLA"
+        case "Fluminense":
+            return "FLU"
+        case "Atlético-PR":
+            return "CAP"
+        case "Atlético-MG":
+            return "CAM"
+        case "Avaí":
+            return "AVA"
+        case "Goiás":
+            return "GOI"
+        case "Grêmio":
+            return "GRE"
+        case "Internacional":
+            return "INT"
+        case "Ponte Preta":
+            return "PON"
+        case "Coritiba":
+            return "CFC"
+        case "Chapecoense":
+            return "CHA"
+        case "Vasco":
+            return "VAS"
+        case "Joinville":
+            return "JEC"
+        case "Figueirense":
+            return "FIG"
+        case "Palmeiras":
+            return "PAL"
         default:
             return "ERROR"
         }

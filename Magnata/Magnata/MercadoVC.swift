@@ -137,7 +137,9 @@ class MercadoVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         case "Vasco":
             return "VAS"
         case "Joinville":
-            return "JOI"
+            return "JEC"
+        case "Figueirense":
+            return "FIG"
         case "Palmeiras":
             return "PAL"
         default:

@@ -11,6 +11,8 @@ import UIKit
 class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     var acoes = [Carteira]()
+    var minha = [Carteira]()
+    var pendentes = [Carteira]()
     var pending = false
     var selectedIndexPath : NSIndexPath?
     var selectedRow = -1
@@ -22,6 +24,8 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         loadTeams()
+        loadPending()
+        acoes = minha
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -36,7 +40,8 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         selectedRow = -1
         selectedIndexPath = NSIndexPath()
         pending = false
-        loadTeams()
+        acoes = minha
+        tableView.reloadData()
     }
     @IBAction func Pending(sender: AnyObject) {
         minhas.backgroundColor = UIColor.lightGrayColor()
@@ -44,50 +49,49 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         pending = true
         selectedRow = -1
         selectedIndexPath = NSIndexPath()
-        loadPending()
+        acoes = pendentes
+        tableView.reloadData()
     }
     
     func loadTeams() {
         
-        //Accessing the JSON.
-        let filePath = NSBundle.mainBundle().pathForResource("Carteira", ofType: "json")
-        var readError : NSError?
-        let data = NSData(contentsOfFile: filePath!, options: NSDataReadingOptions.DataReadingUncached,error: &readError)
-        let json = JSON(data:data!)
+        if minha.count == 0{
+            //Accessing the JSON.
+            let filePath = NSBundle.mainBundle().pathForResource("Carteira", ofType: "json")
+            var readError : NSError?
+            let data = NSData(contentsOfFile: filePath!, options: NSDataReadingOptions.DataReadingUncached,error: &readError)
+            let json = JSON(data:data!)
         
         
-        //Getting all the data and inserting in an array.
-        acoes = [Carteira]()
-        for (key : String, quest: JSON ) in json{
-            var index = key.toInt()
-            println(json[index!]["time"])
-            println(json[index!]["valor_inicial"])
-            acoes.append(Carteira(id: index!, name: String(stringInterpolationSegment : json[index!]["time"]), valor: String(stringInterpolationSegment : json[index!]["valor_atual"]), quantidade: String(stringInterpolationSegment : json[index!]["quantidade"]), variacao: String(stringInterpolationSegment : json[index!]["valorizacao"])))
+            //Getting all the data and inserting in an array.
+            for (key : String, quest: JSON ) in json{
+                var index = key.toInt()
+                println(json[index!]["time"])
+                println(json[index!]["valor_inicial"])
+                minha.append(Carteira(id: index!, name: String(stringInterpolationSegment : json[index!]["time"]), valor: String(stringInterpolationSegment : json[index!]["valor_atual"]), quantidade: String(stringInterpolationSegment : json[index!]["quantidade"]), variacao: String(stringInterpolationSegment : json[index!]["valorizacao"])))
+            }
         }
-        
-        tableView.reloadData()
     }
     
     
     func loadPending() {
         
-        //Accessing the JSON.
-        let filePath = NSBundle.mainBundle().pathForResource("CarteiraVenda", ofType: "json")
-        var readError : NSError?
-        let data = NSData(contentsOfFile: filePath!, options: NSDataReadingOptions.DataReadingUncached,error: &readError)
-        let json = JSON(data:data!)
         
-        
-        
-        //Getting all the data and inserting in an array.
-        acoes = [Carteira]()
-        for (key : String, quest: JSON ) in json{
-            var index = key.toInt()
-            println(json[index!]["time"])
-            println(json[index!]["valor_venda"])
-            acoes.append(Carteira(id: index!, name: String(stringInterpolationSegment : json[index!]["time"]), valor: String(stringInterpolationSegment : json[index!]["valor_venda"]), quantidade: String(stringInterpolationSegment : json[index!]["quantidade"]), variacao: String(stringInterpolationSegment : json[index!]["valorizacao"])))
+        if pendentes.count == 0{
+            //Getting all the data and inserting in an array.
+            //Accessing the JSON.
+            let filePath = NSBundle.mainBundle().pathForResource("CarteiraVenda", ofType: "json")
+            var readError : NSError?
+            let data = NSData(contentsOfFile: filePath!, options: NSDataReadingOptions.DataReadingUncached,error: &readError)
+            let json = JSON(data:data!)
+            
+            for (key : String, quest: JSON ) in json{
+                var index = key.toInt()
+                println(json[index!]["time"])
+                println(json[index!]["valor_venda"])
+                pendentes.append(Carteira(id: index!, name: String(stringInterpolationSegment : json[index!]["time"]), valor: String(stringInterpolationSegment : json[index!]["valor_venda"]), quantidade: String(stringInterpolationSegment : json[index!]["quantidade"]), variacao: String(stringInterpolationSegment : json[index!]["valorizacao"])))
+            }
         }
-        tableView.reloadData()
     }
     
     
@@ -129,6 +133,9 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
             
             cell.buyButton.layer.cornerRadius = 6
             
+            cell.buyButton.tag = row
+            cell.buyButton.addTarget(self, action: "Vender:", forControlEvents: .TouchUpInside)
+            
             return cell
         } else{
             let cell = tableView.dequeueReusableCellWithIdentifier("carteiraVendaCell", forIndexPath: indexPath) as! CarteiraVendaCell
@@ -143,6 +150,28 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         }
         
         
+    }
+    
+    @IBAction func Vender(sender: UIButton){
+        
+        var uiAlert = UIAlertController(title: "Alerta", message: "Deseja realmente vender?", preferredStyle: UIAlertControllerStyle.Alert)
+        self.presentViewController(uiAlert, animated: true, completion: nil)
+        
+        uiAlert.addAction(UIAlertAction(title: "Sim", style: .Default, handler: { action in
+            println("Click of default button")
+            self.pendentes.append(self.minha[sender.tag])
+            self.minha.removeAtIndex(sender.tag)
+            self.acoes.removeAtIndex(sender.tag)
+            self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Automatic)
+        }))
+        
+        uiAlert.addAction(UIAlertAction(title: "Cancelar", style: .Cancel, handler: { action in
+            println("Click of cancel button")
+        }))
+        
+        
+        
+        //println(String(sender.tag))
     }
     
     func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
@@ -177,6 +206,7 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
 
+        if !pending{
         if indexPath == selectedIndexPath {
             if selectedRow == indexPath.row {
                 return CarteiraCell.defaultHeight
@@ -187,7 +217,28 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         else{
             return CarteiraCell.defaultHeight
         }
+        } else{
+            return CarteiraCell.defaultHeight
+        }
 
+    }
+    
+    func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
+        if pending {
+            return true
+        }else {
+            return false
+        }
+    }
+    
+    func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            // handle delete (by removing the data from your array and updating the tableview)
+            minha.append(pendentes[indexPath.row])
+            pendentes.removeAtIndex(indexPath.row)
+            acoes.removeAtIndex(indexPath.row)
+            self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
     }
 
     
@@ -230,7 +281,9 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         case "Vasco":
             return "VAS"
         case "Joinville":
-            return "JOI"
+            return "JEC"
+        case "Figueirense":
+            return "FIG"
         case "Palmeiras":
             return "PAL"
         default:
