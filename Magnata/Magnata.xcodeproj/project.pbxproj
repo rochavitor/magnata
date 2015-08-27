@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22D6F8D51B8FA1E500EC49DB /* CalculoVariacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D6F8D41B8FA1E500EC49DB /* CalculoVariacao.swift */; };
 		22D77B9A1B8794EF00224455 /* MercadoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D77B991B8794EF00224455 /* MercadoCell.swift */; };
 		22D77B9C1B87975200224455 /* MercadoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D77B9B1B87975200224455 /* MercadoVC.swift */; };
 		22D77B9E1B87A69000224455 /* MercadoCompraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D77B9D1B87A69000224455 /* MercadoCompraCell.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22D6F8D41B8FA1E500EC49DB /* CalculoVariacao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculoVariacao.swift; sourceTree = "<group>"; };
 		22D77B991B8794EF00224455 /* MercadoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MercadoCell.swift; sourceTree = "<group>"; };
 		22D77B9B1B87975200224455 /* MercadoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MercadoVC.swift; sourceTree = "<group>"; };
 		22D77B9D1B87A69000224455 /* MercadoCompraCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MercadoCompraCell.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				A784CACA1B86976C0059C18A /* MercadoAcoes.json */,
 				A784CACD1B8698170059C18A /* Carteira.json */,
 				FF3B4EF71B8C11B500ABFB0C /* Resultados.txt */,
+				22D6F8D41B8FA1E500EC49DB /* CalculoVariacao.swift */,
 				A784CAC91B86976C0059C18A /* SwiftyJSON.swift */,
 				FF3B4EF51B8C118600ABFB0C /* ReadJson.swift */,
 				FF3B4EF91B8C166E00ABFB0C /* Resultado.swift */,
@@ -304,6 +307,7 @@
 				A784CACB1B86976C0059C18A /* SwiftyJSON.swift in Sources */,
 				A784CADA1B87A05B0059C18A /* CarteiraVendaCell.swift in Sources */,
 				22EE024B1B8645DD00AF5FD5 /* ViewController.swift in Sources */,
+				22D6F8D51B8FA1E500EC49DB /* CalculoVariacao.swift in Sources */,
 				22D77B9A1B8794EF00224455 /* MercadoCell.swift in Sources */,
 				A72BFC761B8D35FB000ED5EE /* MercadoCompraTimeCell.swift in Sources */,
 				A784CAD61B86A1D30059C18A /* CarteiraVC.swift in Sources */,
