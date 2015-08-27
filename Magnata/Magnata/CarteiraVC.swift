@@ -16,7 +16,10 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     var pending = false
     var selectedIndexPath : NSIndexPath?
     var selectedRow = -1
+    var valorCash = 740.65
     
+    @IBOutlet weak var cash: UILabel!
+    @IBOutlet weak var patrimonio: UILabel!
     @IBOutlet weak var minhas: UIButton!
     @IBOutlet weak var pendente: UIButton!
     @IBOutlet var tableView: UITableView!
@@ -26,6 +29,31 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         loadTeams()
         loadPending()
         acoes = minha
+        
+        minhas.layer.cornerRadius = 4
+        pendente.layer.cornerRadius = 4
+        
+        minhas.layer.borderWidth = 1
+        minhas.layer.borderColor = UIColor.whiteColor().CGColor
+        pendente.layer.borderWidth = 1
+        pendente.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        var valorPatrimonio = 0.0
+        var i = 0
+        
+        for i ; i < minha.count; i++ {
+            valorPatrimonio += (minha[i].valor as NSString).doubleValue
+        }
+        
+        i = 0
+        for i ; i < pendentes.count; i++ {
+            valorPatrimonio += (pendentes[i].valor as NSString).doubleValue
+        }
+        
+        
+        patrimonio.text = "R$ " + String(format: "%.2f", valorPatrimonio)
+        
+        cash.text = "R$ " + String(format: "%.2f", valorCash)
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -36,7 +64,7 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBAction func carteira(sender: AnyObject) {
         minhas.backgroundColor = UIColor.darkGrayColor()
-        pendente.backgroundColor = UIColor.lightGrayColor()
+        pendente.backgroundColor = UIColor.clearColor()
         selectedRow = -1
         selectedIndexPath = NSIndexPath()
         pending = false
@@ -44,7 +72,7 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         tableView.reloadData()
     }
     @IBAction func Pending(sender: AnyObject) {
-        minhas.backgroundColor = UIColor.lightGrayColor()
+        minhas.backgroundColor = UIColor.clearColor()
         pendente.backgroundColor = UIColor.darkGrayColor()
         pending = true
         selectedRow = -1
@@ -240,8 +268,14 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
             self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Automatic)
         }
     }
-
     
+    func getPatrimonio() -> NSString{
+        return patrimonio.text!
+    }
+
+    func getCash() -> String{
+    return cash.text!
+    }
     
     
     func StringToSigla(nome: NSString) -> NSString{
