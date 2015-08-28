@@ -8,16 +8,21 @@
 
 import UIKit
 
-struct CalculoVariacao {
+class CalculoVariacao {
     
-    // receber
-    var resultado: Resultado
-    var valorAtual: String
+    var resultados = Array<Resultado>()
+    let json = ReadJson()
     
-    
-    //  calcular
-    var valorFinal: String
-    var variacao: String
+    let vitoria_casa = 2.5
+    let vitoria_fora = 3.3
+    let empate_casa = 1.0
+    let empate_fora = 2.0
+    let derrota_casa = -2.0
+    let derrota_fora = -1.5
+    let gols_pro_casa = 0.7
+    let gols_pro_fora = 0.6
+    let gols_contra_casa = -0.5
+    let gols_contra_fora = -0.3
     
     
     // receber valorAtual dos dois times
@@ -30,13 +35,66 @@ struct CalculoVariacao {
     
     // salvar a variacao e o valorFinal no mercadoAcoes.json
     
-    func performCalculation() -> Double {
+    init(){
         
-        return 0.0
+    }
+    
+    func performCalculation(nome_time: String) -> Double {
+        resultados = json.loadGames()
+        var i = 0
+        var variacao_time_porcentagem = 0.0
+        
+        for i = 0 ; i < resultados.count ; i++ {
+            // Time Jogando Fora
+            if resultados[i].escudoVisitante == nome_time {
+                // Time Jogando Fora Vencedor
+                if resultados[i].placarVisitante > resultados[i].placarCasa {
+                    variacao_time_porcentagem += vitoria_fora
+                }
+                // Empate Fora
+                else if resultados[i].placarVisitante == resultados[i].placarCasa {
+                    variacao_time_porcentagem += empate_fora
+                }
+                // Time Jogando Fora Perdedor
+                else {
+                    variacao_time_porcentagem += derrota_fora
+                }
+                // Gols Pro Fora
+                variacao_time_porcentagem += (resultados[i].placarVisitante as NSString).doubleValue * gols_pro_fora
+                // Gols Contra Fora
+                variacao_time_porcentagem += (resultados[i].placarCasa as NSString).doubleValue * gols_contra_fora
+            }
+            
+            // Time Jogando em Casa
+            if resultados[i].escudoCasa == nome_time {
+                // Time Jogando em Casa Vencedor
+                if resultados[i].placarCasa > resultados[i].placarVisitante {
+                    variacao_time_porcentagem += vitoria_casa
+                }
+                    // Empate em Casa
+                else if resultados[i].placarVisitante == resultados[i].placarCasa {
+                    variacao_time_porcentagem += empate_casa
+                }
+                    // Time Jogando em Casa Perdedor
+                else {
+                    variacao_time_porcentagem += derrota_casa
+                }
+                // Gols Pro em Casa
+                variacao_time_porcentagem += (resultados[i].placarCasa as NSString).doubleValue * gols_pro_casa
+                // Gols Contra em Casa
+                variacao_time_porcentagem += (resultados[i].placarVisitante as NSString).doubleValue * gols_contra_casa
+            }
+        }
+
+        
+        //println(variacao_time_porcentagem)
+
+        
+        
+        return variacao_time_porcentagem
     }
     
     func saveJson(){}
-    
    
 }
 

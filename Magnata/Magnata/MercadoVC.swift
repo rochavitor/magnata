@@ -17,12 +17,6 @@ class MercadoVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*tableView.backgroundColor = UIColor(red: 243.0/255, green: 243.0/255, blue: 243.0/255, alpha: 0.93)
-        tableView.layer.cornerRadius = 8.0
-        tableView.layer.masksToBounds = true
-        tableView.layer.borderColor = UIColor( red: 153/255, green: 153/255, blue:0/255, alpha: 1.0 ).CGColor
-        tableView.layer.borderWidth = 2.0*/
-        
         loadTeams()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -76,13 +70,22 @@ class MercadoVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         let row = indexPath.row
         cell.teamImage.image = UIImage(named: StringToSigla(acoes[row].name) as String!)
         cell.teamName.text = acoes[row].name
-        cell.valor.text = "R$ " + String(format: "%.2f", (acoes[row].valor as NSString).doubleValue)
-        if (acoes[row].variacao as NSString).floatValue >= 0{
+        
+        
+        var calc = CalculoVariacao()
+        
+        var variacao_time_porcentagem = calc.performCalculation(StringToSigla(acoes[row].name) as String)
+        
+        cell.valor.text = "R$ " + String(format: "%.2f", (acoes[row].valor as NSString).doubleValue * ((variacao_time_porcentagem/100) + 1))
+        
+        if variacao_time_porcentagem >= 0{
+            //cell.variacao.textColor = UIColor(red: 34.0, green: 246.0, blue: 22.0, alpha: 1.0)
             cell.variacao.textColor = UIColor.greenColor()
-            cell.variacao.text = "+" + String(format: "%.2f", (acoes[row].variacao as NSString).doubleValue) + "%"
+            cell.variacao.text = "+" + String(format: "%.2f", variacao_time_porcentagem) + "%"
         } else {
+            //cell.variacao.textColor = UIColor(red: 255, green: 43, blue: 57, alpha: 1.0)
             cell.variacao.textColor = UIColor.redColor()
-            cell.variacao.text = String(format: "%.2f", (acoes[row].variacao as NSString).doubleValue) + "%"
+            cell.variacao.text = String(format: "%.2f", variacao_time_porcentagem) + "%"
         }
         
         cell.backgroundColor = UIColor.clearColor()
