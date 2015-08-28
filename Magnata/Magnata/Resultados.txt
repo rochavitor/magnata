@@ -75,7 +75,7 @@
 },
 {
 "Posição Casa" : "19",
-"Escudo Casa" : "JOI",
+"Escudo Casa" : "JEC",
 "Placar Casa" : "2",
 "Placar Visitante" : "1",
 "Escudo Visitante" : "FLU",

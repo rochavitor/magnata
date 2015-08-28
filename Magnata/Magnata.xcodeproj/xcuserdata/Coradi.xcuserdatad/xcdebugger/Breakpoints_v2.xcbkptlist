@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Magnata/CarteiraVC.swift"
-            timestampString = "462400818.810063"
+            timestampString = "462403490.04849"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "277"
-            endingLineNumber = "277"
+            startingLineNumber = "286"
+            endingLineNumber = "286"
             landmarkName = "getCash()"
             landmarkType = "5">
          </BreakpointContent>

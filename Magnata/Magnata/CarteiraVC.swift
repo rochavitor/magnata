@@ -142,7 +142,11 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
             let cell = tableView.dequeueReusableCellWithIdentifier("carteiraCell", forIndexPath: indexPath) as! CarteiraCell
             cell.teamImage.image = UIImage(named: StringToSigla(acoes[row].name) as String)!
             cell.teamName.text = acoes[row].name
-            cell.quantidade.text = acoes[row].quantidade + " ações"
+            if acoes[row].quantidade.toInt() <= 1 {
+                cell.quantidade.text = acoes[row].quantidade + " ação"
+            } else {
+                cell.quantidade.text = acoes[row].quantidade + " ações"
+            }
             cell.valor.text = "R$ " + String(format: "%.2f", (acoes[row].valor as NSString).doubleValue)
             if (acoes[row].variacao as NSString).floatValue >= 0{
                 //cell.variacao.textColor = UIColor(red: 34.0, green: 246.0, blue: 22.0, alpha: 1.0)
@@ -170,7 +174,12 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
             cell.teamImage.image = UIImage(named: StringToSigla(acoes[row].name) as String)!
             cell.teamName.text = acoes[row].name
             cell.valor.text = "R$ " + String(format: "%.2f", (acoes[row].valor as NSString).doubleValue)
-            cell.quantidade.text = acoes[row].quantidade + " ações"
+            if acoes[row].quantidade.toInt() <= 1 {
+                cell.quantidade.text = acoes[row].quantidade + " ação"
+            } else {
+                cell.quantidade.text = acoes[row].quantidade + " ações"
+            }
+            
             cell.backgroundColor = UIColor.clearColor()
             cell.selectionStyle = .None
             
