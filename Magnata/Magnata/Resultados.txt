@@ -45,7 +45,7 @@
 "Posição Casa" : "12",
 "Escudo Casa" : "PON",
 "Placar Casa" : "0",
-"Placar Visitante" : "0",
+"Placar Visitante" : "1",
 "Escudo Visitante" : "GRE",
 "Posição Visitante" : "3"
 },

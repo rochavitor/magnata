@@ -138,6 +138,10 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         
         let row = indexPath.row
         
+        var calc = CalculoVariacao()
+        
+        var variacao_time_porcentagem = calc.performCalculation(StringToSigla(acoes[row].name) as String)
+        
         if !pending {
             let cell = tableView.dequeueReusableCellWithIdentifier("carteiraCell", forIndexPath: indexPath) as! CarteiraCell
             cell.teamImage.image = UIImage(named: StringToSigla(acoes[row].name) as String)!
@@ -147,19 +151,21 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
             } else {
                 cell.quantidade.text = acoes[row].quantidade + " ações"
             }
-            cell.valor.text = "R$ " + String(format: "%.2f", (acoes[row].valor as NSString).doubleValue)
-            if (acoes[row].variacao as NSString).floatValue >= 0{
+            
+            if variacao_time_porcentagem >= 0{
                 //cell.variacao.textColor = UIColor(red: 34.0, green: 246.0, blue: 22.0, alpha: 1.0)
                 cell.variacao.textColor = UIColor.greenColor()
-                cell.variacao.text = "+" + String(format: "%.2f", (acoes[row].variacao as NSString).doubleValue) + "%"
+                cell.variacao.text = "+" + String(format: "%.2f", variacao_time_porcentagem) + "%"
             } else {
                 //cell.variacao.textColor = UIColor(red: 255, green: 43, blue: 57, alpha: 1.0)
                 cell.variacao.textColor = UIColor.redColor()
-                cell.variacao.text = String(format: "%.2f", (acoes[row].variacao as NSString).doubleValue) + "%"
+                cell.variacao.text = String(format: "%.2f", variacao_time_porcentagem) + "%"
             }
             
+            cell.valor.text = "R$ " + String(format: "%.2f", (acoes[row].valor as NSString).doubleValue * ((variacao_time_porcentagem/100) + 1))
+            
             cell.quantityTextField.text = acoes[row].quantidade
-            cell.valueTextField.text = "R$ " + String(format: "%.2f", (acoes[row].valor as NSString).doubleValue)
+            cell.valueTextField.text = "R$ " + String(format: "%.2f", (acoes[row].valor as NSString).doubleValue * ((variacao_time_porcentagem/100) + 1))
             cell.backgroundColor = UIColor.clearColor()
             cell.selectionStyle = .None
             
@@ -173,7 +179,7 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
             let cell = tableView.dequeueReusableCellWithIdentifier("carteiraVendaCell", forIndexPath: indexPath) as! CarteiraVendaCell
             cell.teamImage.image = UIImage(named: StringToSigla(acoes[row].name) as String)!
             cell.teamName.text = acoes[row].name
-            cell.valor.text = "R$ " + String(format: "%.2f", (acoes[row].valor as NSString).doubleValue)
+            cell.valor.text = "R$ " + String(format: "%.2f", (acoes[row].valor as NSString).doubleValue * ((variacao_time_porcentagem/100) + 1))
             if acoes[row].quantidade.toInt() <= 1 {
                 cell.quantidade.text = acoes[row].quantidade + " ação"
             } else {
