@@ -205,6 +205,8 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
             self.pendentes.append(self.minha[sender.tag])
             self.minha.removeAtIndex(sender.tag)
             self.acoes.removeAtIndex(sender.tag)
+            println(sender.tag)
+
             self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Automatic)
         }))
         
@@ -283,6 +285,15 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
             self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Automatic)
         }
     }
+    
+    
+//    override func prepareForSegue(segue: (UIStoryboardSegue!), sender: AnyObject!){
+//        let navVC = segue.destinationViewController as! UINavigationController
+//        let tableVC = navVC.viewControllers.first as! MercadoVC
+//        
+//        tableVC.minha = minha
+//        tableVC.pendentes = pendentes
+//    }
     
     func getPatrimonio() -> NSString{
         return patrimonio.text!

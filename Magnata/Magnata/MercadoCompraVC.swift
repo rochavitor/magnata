@@ -12,9 +12,13 @@ import UIKit
 class MercadoCompraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     var acoes = [MercadoCompra]()
-    
     var selectedIndexPath : NSIndexPath?
     var selectedRow = -1
+    var valorCash = 740.65
+    
+    
+    @IBOutlet weak var cash: UILabel!
+    @IBOutlet weak var patrimonio: UILabel!
     
     
     @IBOutlet var tableView: UITableView!
@@ -22,6 +26,9 @@ class MercadoCompraVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         loadTeams()
+        
+        cash.text = "R$ " + String(format: "%.2f", valorCash)
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -73,6 +80,9 @@ class MercadoCompraVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         cell.backgroundColor = UIColor.clearColor()
         cell.selectionStyle = .None
         
+        cell.buyButton.tag = row
+        cell.buyButton.addTarget(self, action: "Comprar:", forControlEvents: .TouchUpInside)
+        
         return cell
     }
     
@@ -118,6 +128,28 @@ class MercadoCompraVC: UIViewController, UITableViewDataSource, UITableViewDeleg
             return MercadoCompraCell.defaultHeight
         }
         
+    }
+    
+    @IBAction func Comprar(sender: UIButton){
+        
+        var uiAlert = UIAlertController(title: "Alerta", message: "Deseja comprar as ações?", preferredStyle: UIAlertControllerStyle.Alert)
+        self.presentViewController(uiAlert, animated: true, completion: nil)
+        
+        uiAlert.addAction(UIAlertAction(title: "Sim", style: .Default, handler: { action in
+            println("Click of default button")
+//            self.pendentes.append(self.minha[sender.tag])
+            println(sender.tag)
+            self.acoes.removeAtIndex(sender.tag)
+            self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Automatic)
+        }))
+        
+        uiAlert.addAction(UIAlertAction(title: "Cancelar", style: .Cancel, handler: { action in
+            println("Click of cancel button")
+        }))
+        
+        
+        
+        //println(String(sender.tag))
     }
     
     

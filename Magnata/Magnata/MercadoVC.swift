@@ -13,6 +13,15 @@ class MercadoVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     var acoes = [Mercado]()
     
+//    var minha = [Carteira]()
+//    var pendentes = [Carteira]()
+    
+    var valorCash = 740.65
+    
+    @IBOutlet weak var cash: UILabel!
+    @IBOutlet weak var patrimonio: UILabel!
+
+    
     @IBOutlet var tableView: UITableView!
     
     override func viewWillAppear(animated: Bool) {
@@ -25,6 +34,7 @@ class MercadoVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         super.viewDidLoad()
         loadTeams()
 
+        
 
         // Do any additional setup after loading the view, typically from a nib.
     }
