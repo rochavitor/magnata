@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9TV-ET-RZC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9TV-ET-RZC">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -283,25 +283,66 @@
                                     <constraint firstAttribute="height" constant="40" id="kII-gG-wQv"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6O-Rv-Q7E">
+                                <rect key="frame" x="161" y="99" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Syl-nB-IG7"/>
+                                    <constraint firstAttribute="width" constant="40" id="UUs-z3-L77"/>
+                                </constraints>
+                                <state key="normal" title=".">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showPrevious:" destination="idJ-sM-D6k" eventType="touchUpInside" id="hx1-6o-KCO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kur-iM-QOo">
+                                <rect key="frame" x="393" y="103" width="46" height="30"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="ZZi-Hk-wlv"/>
+                                    <constraint firstAttribute="height" constant="40" id="aWK-uv-VIY"/>
+                                </constraints>
+                                <state key="normal" title=".">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showNext:" destination="idJ-sM-D6k" eventType="touchUpInside" id="8WQ-ci-cxo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.090196078430000007" green="0.094117647060000004" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="BWv-5n-Hi6" firstAttribute="centerY" secondItem="V0C-EE-Hh0" secondAttribute="centerY" id="4Bp-Nr-jwM"/>
+                            <constraint firstItem="V0C-EE-Hh0" firstAttribute="leading" secondItem="BWv-5n-Hi6" secondAttribute="trailing" constant="32" id="7eL-s3-AxQ"/>
                             <constraint firstItem="aNJ-8E-3p6" firstAttribute="top" secondItem="1B5-r6-FQo" secondAttribute="bottom" constant="88" id="AEZ-Oz-Wkr"/>
                             <constraint firstAttribute="centerX" secondItem="aNJ-8E-3p6" secondAttribute="centerX" id="H90-ZD-e74"/>
+                            <constraint firstItem="BWv-5n-Hi6" firstAttribute="leading" secondItem="D6O-Rv-Q7E" secondAttribute="trailing" constant="32" id="MAl-Ld-zBO"/>
                             <constraint firstItem="KzP-i4-97n" firstAttribute="leading" secondItem="gBV-Lw-OgQ" secondAttribute="leadingMargin" constant="-16" id="Osu-Js-7mC"/>
                             <constraint firstItem="aNJ-8E-3p6" firstAttribute="top" secondItem="KzP-i4-97n" secondAttribute="bottom" constant="24" id="V9Q-BK-46o"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KzP-i4-97n" secondAttribute="trailing" constant="-16" id="Zi7-Lt-R8k"/>
+                            <constraint firstAttribute="centerY" secondItem="Kur-iM-QOo" secondAttribute="centerY" id="ZoV-IN-YBs"/>
                             <constraint firstItem="KzP-i4-97n" firstAttribute="top" secondItem="1B5-r6-FQo" secondAttribute="bottom" id="cqc-N7-Th7"/>
                             <constraint firstItem="BWv-5n-Hi6" firstAttribute="top" secondItem="KzP-i4-97n" secondAttribute="bottom" constant="17" id="f3t-u8-jkd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aNJ-8E-3p6" secondAttribute="trailing" constant="-16" id="gBh-cC-oKa"/>
                             <constraint firstItem="aNJ-8E-3p6" firstAttribute="leading" secondItem="gBV-Lw-OgQ" secondAttribute="leadingMargin" constant="-16" id="gLz-91-hKl"/>
+                            <constraint firstItem="Kur-iM-QOo" firstAttribute="leading" secondItem="BWv-5n-Hi6" secondAttribute="trailing" constant="32" id="keI-tJ-X2u"/>
                             <constraint firstItem="BWv-5n-Hi6" firstAttribute="leading" secondItem="I6Y-Qd-DOe" secondAttribute="trailing" constant="36" id="l3B-Ws-PIB"/>
+                            <constraint firstItem="Kur-iM-QOo" firstAttribute="centerY" secondItem="BWv-5n-Hi6" secondAttribute="centerY" id="lCo-Q8-mej"/>
                             <constraint firstItem="FTT-ed-YvN" firstAttribute="top" secondItem="aNJ-8E-3p6" secondAttribute="bottom" constant="-43" id="pPu-fY-zav"/>
                             <constraint firstAttribute="centerX" secondItem="BWv-5n-Hi6" secondAttribute="centerX" id="pTK-oc-nw1"/>
                             <constraint firstItem="I6Y-Qd-DOe" firstAttribute="centerY" secondItem="BWv-5n-Hi6" secondAttribute="centerY" id="rEC-XT-OnO"/>
+                            <constraint firstItem="D6O-Rv-Q7E" firstAttribute="centerY" secondItem="BWv-5n-Hi6" secondAttribute="centerY" id="rlk-e1-gSI"/>
                             <constraint firstItem="V0C-EE-Hh0" firstAttribute="leading" secondItem="BWv-5n-Hi6" secondAttribute="trailing" constant="32" id="xpt-XN-7fC"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ZoV-IN-YBs"/>
+                                <exclude reference="xpt-XN-7fC"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Resultados" image="Resultados" selectedImage="Resultados" id="bYs-ag-R3G">
                         <userDefinedRuntimeAttributes>
@@ -309,6 +350,9 @@
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <connections>
+                        <outlet property="nextButton" destination="Kur-iM-QOo" id="3CJ-7K-ljv"/>
+                        <outlet property="previousButton" destination="D6O-Rv-Q7E" id="J73-hi-8vW"/>
+                        <outlet property="rodadaLabel" destination="BWv-5n-Hi6" id="6js-Ra-jNc"/>
                         <outlet property="tableView" destination="aNJ-8E-3p6" id="nKd-sP-6yU"/>
                     </connections>
                 </viewController>

@@ -40,7 +40,7 @@ class CalculoVariacao {
     }
     
     func performCalculation(nome_time: String) -> Double {
-        resultados = json.loadGames("Rodada21")
+        resultados = json.loadGames("Rodada 21")
         var i = 0
         var variacao_time_porcentagem = 0.0
         

@@ -14,6 +14,13 @@ class ResultadosVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     let json = ReadJson()
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var previousButton: UIButton!
+    @IBOutlet weak var rodadaLabel: UILabel!
+    
+    var rodada = "Rodada 21"
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         /*tableView.backgroundColor = UIColor(red: 243.0/255, green: 243.0/255, blue: 243.0/255, alpha: 0.93)
@@ -22,8 +29,12 @@ class ResultadosVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         tableView.layer.borderColor = UIColor( red: 153/255, green: 153/255, blue:0/255, alpha: 1.0 ).CGColor
         tableView.layer.borderWidth = 2.0*/
         
-        resultados = json.loadGames("Rodada21")
+        resultados = json.loadGames(rodada)
         // Do any additional setup after loading the view, typically from a nib.
+        
+        rodadaLabel.text = rodada
+//        nextButton.setImage(UIImage(named: "NEXT"), forState: UIControlState.Normal)
+//        previousButton.setImage(UIImage(named: "PREVIOUS"), forState: UIControlState.Normal)
     }
     
     override func didReceiveMemoryWarning() {
@@ -70,6 +81,33 @@ class ResultadosVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         //        println(acoes[row].quantidade)
     }
     
+   
+    @IBAction func showNext(sender: AnyObject) {
+        
+        if rodada == "Rodada 21" {
+            rodada = "Rodada 22"
+        } else if rodada == "Rodada 20" {
+            rodada = "Rodada 21"
+        }
+        
+        resultados = json.loadGames(rodada)
+        rodadaLabel.text = rodada
+    
+        tableView.reloadData()
+    }
+    @IBAction func showPrevious(sender: AnyObject) {
+        
+        if rodada == "Rodada 22" {
+            rodada = "Rodada 21"
+        } else if rodada == "Rodada 21" {
+            rodada = "Rodada 20"
+        }
+        
+        resultados = json.loadGames(rodada)
+        rodadaLabel.text = rodada
+        
+        tableView.reloadData()
+    }
     
 }
 
