@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9TV-ET-RZC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9TV-ET-RZC">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -303,7 +303,11 @@
                             <constraint firstItem="V0C-EE-Hh0" firstAttribute="leading" secondItem="BWv-5n-Hi6" secondAttribute="trailing" constant="32" id="xpt-XN-7fC"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Resultados" image="VAS" selectedImage="VAS" id="bYs-ag-R3G"/>
+                    <tabBarItem key="tabBarItem" title="Resultados" image="Resultados" selectedImage="Resultados" id="bYs-ag-R3G">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="Resultados"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <connections>
                         <outlet property="tableView" destination="aNJ-8E-3p6" id="nKd-sP-6yU"/>
                     </connections>
@@ -648,7 +652,11 @@
                             <constraint firstAttribute="centerX" secondItem="I4n-9w-2FL" secondAttribute="centerX" id="k4j-9L-DuZ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Carteira" image="FLU" selectedImage="FLU" id="tzP-S5-l87"/>
+                    <tabBarItem key="tabBarItem" title="Carteira" image="Carteira" selectedImage="Carteira" id="tzP-S5-l87">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="Carteira"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <connections>
                         <outlet property="cash" destination="4Qb-bx-KyQ" id="e2t-Zx-zK8"/>
                         <outlet property="minhas" destination="wf2-lK-ei9" id="ppL-Zy-pOo"/>
@@ -1063,7 +1071,11 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Txq-7I-fvX" secondAttribute="trailing" constant="-16" id="ueN-7M-z6J"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Mercado" image="SAN" selectedImage="SAN" id="EQN-gw-pe7" userLabel="Mercado"/>
+                    <tabBarItem key="tabBarItem" title="Mercado" image="Mercado" selectedImage="Mercado" id="EQN-gw-pe7" userLabel="Mercado">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="Mercado"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <connections>
                         <outlet property="tableView" destination="Txq-7I-fvX" id="o91-zL-1Eh"/>
                     </connections>
@@ -1111,16 +1123,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="FLU" width="21" height="21"/>
+        <image name="Carteira" width="27" height="30"/>
         <image name="Grafico" width="202" height="95"/>
         <image name="Grama" width="853" height="533"/>
+        <image name="Mercado" width="40" height="40"/>
         <image name="MinusIcon" width="36" height="35"/>
         <image name="NEXT" width="24" height="31"/>
         <image name="PREVIOUS" width="24" height="31"/>
         <image name="PerfilIcon" width="170" height="170"/>
         <image name="PlusIcon" width="35" height="34"/>
-        <image name="SAN" width="21" height="21"/>
+        <image name="Resultados" width="28" height="28"/>
         <image name="SAO" width="21" height="21"/>
-        <image name="VAS" width="21" height="21"/>
     </resources>
 </document>

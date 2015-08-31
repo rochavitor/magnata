@@ -15,9 +15,17 @@ class MercadoVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet var tableView: UITableView!
     
+    override func viewWillAppear(animated: Bool) {
+        self.view.tintColor = UIColor.greenColor()
+        let color = UIColor(red: 2/255, green: 163/255, blue: 7/255, alpha: 1.0)
+        self.tabBarController?.tabBar.tintColor = color
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadTeams()
+
+
         // Do any additional setup after loading the view, typically from a nib.
     }
     
