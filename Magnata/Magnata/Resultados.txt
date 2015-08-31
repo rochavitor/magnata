@@ -112,7 +112,7 @@
 "Escudo Casa" : "GRE",
 "Placar Casa" : "0",
 "Placar Visitante" : "0",
-"Escudo Visitante" : "COR",
+"Escudo Visitante" : "CFC",
 "Posição Visitante" : "18"
 },
 {
@@ -207,7 +207,7 @@
 },
 {
 "Posição Casa" : "18",
-"Escudo Casa" : "COR",
+"Escudo Casa" : "CFC",
 "Placar Casa" : "",
 "Placar Visitante" : "",
 "Escudo Visitante" : "SPO",
