@@ -15,6 +15,8 @@ class MercadoCompraVC: UIViewController, UITableViewDataSource, UITableViewDeleg
     var selectedIndexPath : NSIndexPath?
     var selectedRow = -1
     var valorCash = 740.65
+    var valorPatrimonio = 1174.10
+
     
     
     @IBOutlet weak var cash: UILabel!
@@ -28,6 +30,8 @@ class MercadoCompraVC: UIViewController, UITableViewDataSource, UITableViewDeleg
         loadTeams()
         
         cash.text = "R$ " + String(format: "%.2f", valorCash)
+        patrimonio.text = "R$ " + String(format: "%.2f", valorPatrimonio)
+
         
         // Do any additional setup after loading the view, typically from a nib.
     }

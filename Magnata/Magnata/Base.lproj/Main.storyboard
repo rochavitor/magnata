@@ -350,7 +350,9 @@
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <connections>
+                        <outlet property="cash" destination="EGy-ta-9rQ" id="SIX-sI-rz4"/>
                         <outlet property="nextButton" destination="Kur-iM-QOo" id="3CJ-7K-ljv"/>
+                        <outlet property="patrimonio" destination="Z4L-0X-8lY" id="zIy-E6-aPg"/>
                         <outlet property="previousButton" destination="D6O-Rv-Q7E" id="J73-hi-8vW"/>
                         <outlet property="rodadaLabel" destination="BWv-5n-Hi6" id="6js-Ra-jNc"/>
                         <outlet property="tableView" destination="aNJ-8E-3p6" id="nKd-sP-6yU"/>
