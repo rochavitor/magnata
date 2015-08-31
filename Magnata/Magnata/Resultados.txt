@@ -1,6 +1,6 @@
 {
 
-"Resultados": [
+"Rodada20": [
 {
 "Posição Casa" : "2",
 "Escudo Casa" : "CAM",
@@ -8,6 +8,170 @@
 "Placar Visitante" : "1",
 "Escudo Visitante" : "PAL",
 "Posição Visitante" : "5"
+},
+{
+"Posição Casa" : "1",
+"Escudo Casa" : "COR",
+"Placar Casa" : "3",
+"Placar Visitante" : "0",
+"Escudo Visitante" : "CRU",
+"Posição Visitante" : "15"
+},
+{
+"Posição Casa" : "11",
+"Escudo Casa" : "SAN",
+"Placar Casa" : "5",
+"Placar Visitante" : "2",
+"Escudo Visitante" : "AVA",
+"Posição Visitante" : "18"
+},
+{
+"Posição Casa" : "16",
+"Escudo Casa" : "GOI",
+"Placar Casa" : "3",
+"Placar Visitante" : "0",
+"Escudo Visitante" : "VAS",
+"Posição Visitante" : "20"
+},
+{
+"Posição Casa" : "14",
+"Escudo Casa" : "FIG",
+"Placar Casa" : "2",
+"Placar Visitante" : "1",
+"Escudo Visitante" : "SPO",
+"Posição Visitante" : "7"
+},
+{
+"Posição Casa" : "12",
+"Escudo Casa" : "PON",
+"Placar Casa" : "0",
+"Placar Visitante" : "1",
+"Escudo Visitante" : "GRE",
+"Posição Visitante" : "3"
+},
+{
+"Posição Casa" : "17",
+"Escudo Casa" : "CFC",
+"Placar Casa" : "1",
+"Placar Visitante" : "0",
+"Escudo Visitante" : "CHA",
+"Posição Visitante" : "9"
+},
+{
+"Posição Casa" : "13",
+"Escudo Casa" : "FLA",
+"Placar Casa" : "2",
+"Placar Visitante" : "1",
+"Escudo Visitante" : "SAO",
+"Posição Visitante" : "6"
+},
+{
+"Posição Casa" : "10",
+"Escudo Casa" : "INT",
+"Placar Casa" : "2",
+"Placar Visitante" : "0",
+"Escudo Visitante" : "CAP",
+"Posição Visitante" : "8"
+},
+{
+"Posição Casa" : "19",
+"Escudo Casa" : "JEC",
+"Placar Casa" : "2",
+"Placar Visitante" : "1",
+"Escudo Visitante" : "FLU",
+"Posição Visitante" : "4"
+}
+],
+"Rodada21": [
+{
+"Posição Casa" : "4",
+"Escudo Casa" : "PAL",
+"Placar Casa" : "3",
+"Placar Visitante" : "2",
+"Escudo Visitante" : "JOI",
+"Posição Visitante" : "19"
+},
+{
+"Posição Casa" : "1",
+"Escudo Casa" : "COR",
+"Placar Casa" : "3",
+"Placar Visitante" : "0",
+"Escudo Visitante" : "CRU",
+"Posição Visitante" : "15"
+},
+{
+"Posição Casa" : "11",
+"Escudo Casa" : "SAN",
+"Placar Casa" : "5",
+"Placar Visitante" : "2",
+"Escudo Visitante" : "AVA",
+"Posição Visitante" : "18"
+},
+{
+"Posição Casa" : "16",
+"Escudo Casa" : "GOI",
+"Placar Casa" : "3",
+"Placar Visitante" : "0",
+"Escudo Visitante" : "VAS",
+"Posição Visitante" : "20"
+},
+{
+"Posição Casa" : "14",
+"Escudo Casa" : "FIG",
+"Placar Casa" : "2",
+"Placar Visitante" : "1",
+"Escudo Visitante" : "SPO",
+"Posição Visitante" : "7"
+},
+{
+"Posição Casa" : "12",
+"Escudo Casa" : "PON",
+"Placar Casa" : "0",
+"Placar Visitante" : "1",
+"Escudo Visitante" : "GRE",
+"Posição Visitante" : "3"
+},
+{
+"Posição Casa" : "17",
+"Escudo Casa" : "CFC",
+"Placar Casa" : "1",
+"Placar Visitante" : "0",
+"Escudo Visitante" : "CHA",
+"Posição Visitante" : "9"
+},
+{
+"Posição Casa" : "13",
+"Escudo Casa" : "FLA",
+"Placar Casa" : "2",
+"Placar Visitante" : "1",
+"Escudo Visitante" : "SAO",
+"Posição Visitante" : "6"
+},
+{
+"Posição Casa" : "10",
+"Escudo Casa" : "INT",
+"Placar Casa" : "2",
+"Placar Visitante" : "0",
+"Escudo Visitante" : "CAP",
+"Posição Visitante" : "8"
+},
+{
+"Posição Casa" : "19",
+"Escudo Casa" : "JEC",
+"Placar Casa" : "2",
+"Placar Visitante" : "1",
+"Escudo Visitante" : "FLU",
+"Posição Visitante" : "4"
+}
+],
+"Rodada22": [
+{
+"Posição Casa" : "17",
+"Escudo Casa" : "GOI",
+"Placar Casa" : "",
+"Placar Visitante" : "",
+"Escudo Visitante" : "PAL",
+"Posição Visitante" : "4"
 },
 {
 "Posição Casa" : "1",

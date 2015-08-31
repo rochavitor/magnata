@@ -266,7 +266,7 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
     }
     
-    func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         if pending {
             return true
         }else {
@@ -274,7 +274,7 @@ class CarteiraVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         }
     }
     
-    func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             // handle delete (by removing the data from your array and updating the tableview)
             minha.append(pendentes[indexPath.row])

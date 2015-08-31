@@ -11,7 +11,7 @@ import UIKit
 class ReadJson {
     
     /** Read the JSON, create Alimentos objects with name and image. If is the first launch, pass these objects to Core Data**/
-    func loadGames() -> Array<Resultado> {
+    func loadGames(rodada: String) -> Array<Resultado> {
         
         var resultados = Array<Resultado>()
         
@@ -22,7 +22,7 @@ class ReadJson {
         var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(jsonData!, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
         
         ///Array to build the objects
-        var games : NSArray = jsonResult["Resultados"] as! NSArray
+        var games : NSArray = jsonResult[rodada] as! NSArray
         
  
             //Create Alimentos and pass to context

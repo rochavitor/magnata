@@ -22,7 +22,7 @@ class ResultadosVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         tableView.layer.borderColor = UIColor( red: 153/255, green: 153/255, blue:0/255, alpha: 1.0 ).CGColor
         tableView.layer.borderWidth = 2.0*/
         
-        resultados = json.loadGames()
+        resultados = json.loadGames("Rodada21")
         // Do any additional setup after loading the view, typically from a nib.
     }
     
