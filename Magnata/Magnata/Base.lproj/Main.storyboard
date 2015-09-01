@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9TV-ET-RZC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9TV-ET-RZC">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -350,7 +350,9 @@
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <connections>
+                        <outlet property="cash" destination="EGy-ta-9rQ" id="SIX-sI-rz4"/>
                         <outlet property="nextButton" destination="Kur-iM-QOo" id="3CJ-7K-ljv"/>
+                        <outlet property="patrimonio" destination="Z4L-0X-8lY" id="zIy-E6-aPg"/>
                         <outlet property="previousButton" destination="D6O-Rv-Q7E" id="J73-hi-8vW"/>
                         <outlet property="rodadaLabel" destination="BWv-5n-Hi6" id="6js-Ra-jNc"/>
                         <outlet property="tableView" destination="aNJ-8E-3p6" id="nKd-sP-6yU"/>
@@ -744,12 +746,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Uq-rj-1De">
                                 <rect key="frame" x="0.0" y="64" width="600" height="64"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3x-Nm-xoX">
-                                        <rect key="frame" x="56" y="12" width="138" height="21"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="R$ 0000,00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbE-wc-gb9">
                                         <rect key="frame" x="484" y="37" width="103" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -774,7 +770,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrU-ac-oNK">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thiago Coradi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrU-ac-oNK">
                                         <rect key="frame" x="57" y="36" width="137" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -783,6 +779,12 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PerfilIcon" translatesAutoresizingMaskIntoConstraints="NO" id="npv-5X-2Ls">
                                         <rect key="frame" x="8" y="12" width="42" height="42"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coradi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3x-Nm-xoX">
+                                        <rect key="frame" x="56" y="12" width="138" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.77625868057676772" green="0.25669190193972125" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -965,6 +967,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="cash" destination="34l-ZS-mmf" id="ZHe-Ud-UAB"/>
+                        <outlet property="patrimonio" destination="dbE-wc-gb9" id="fX4-o9-T0v"/>
                         <outlet property="tableView" destination="Tb3-WN-rTc" id="j6W-zx-gOP"/>
                     </connections>
                 </viewController>
@@ -1121,6 +1125,8 @@
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <connections>
+                        <outlet property="cash" destination="BTa-NB-L2p" id="0rr-FY-hXC"/>
+                        <outlet property="patrimonio" destination="MVb-xD-Y8z" id="B79-uu-A93"/>
                         <outlet property="tableView" destination="Txq-7I-fvX" id="o91-zL-1Eh"/>
                     </connections>
                 </viewController>

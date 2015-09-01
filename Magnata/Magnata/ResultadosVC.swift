@@ -18,8 +18,13 @@ class ResultadosVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     @IBOutlet weak var previousButton: UIButton!
     @IBOutlet weak var rodadaLabel: UILabel!
     
-    var rodada = "Rodada 21"
+    @IBOutlet weak var cash: UILabel!
+    @IBOutlet weak var patrimonio: UILabel!
     
+    var rodada = "Rodada 21"
+    var valorCash = 740.65
+    var valorPatrimonio = 1174.10
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +40,12 @@ class ResultadosVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         rodadaLabel.text = rodada
 //        nextButton.setImage(UIImage(named: "NEXT"), forState: UIControlState.Normal)
 //        previousButton.setImage(UIImage(named: "PREVIOUS"), forState: UIControlState.Normal)
+        
+        
+        
+        cash.text = "R$ " + String(format: "%.2f", valorCash)
+        patrimonio.text = "R$ " + String(format: "%.2f", valorPatrimonio)
+
     }
     
     override func didReceiveMemoryWarning() {
