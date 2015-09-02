@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9TV-ET-RZC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9TV-ET-RZC">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -289,7 +289,7 @@
                                     <constraint firstAttribute="height" constant="40" id="Syl-nB-IG7"/>
                                     <constraint firstAttribute="width" constant="40" id="UUs-z3-L77"/>
                                 </constraints>
-                                <state key="normal" title=".">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -305,7 +305,7 @@
                                     <constraint firstAttribute="width" constant="46" id="ZZi-Hk-wlv"/>
                                     <constraint firstAttribute="height" constant="40" id="aWK-uv-VIY"/>
                                 </constraints>
-                                <state key="normal" title=".">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -484,7 +484,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Grafico" translatesAutoresizingMaskIntoConstraints="NO" id="X2h-7e-HBt">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Grafico2" translatesAutoresizingMaskIntoConstraints="NO" id="X2h-7e-HBt">
                                                     <rect key="frame" x="10" y="62" width="581" height="158"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Quantidade:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWO-Bq-rQ5">
@@ -1175,6 +1175,7 @@
     <resources>
         <image name="Carteira" width="27" height="30"/>
         <image name="Grafico" width="202" height="95"/>
+        <image name="Grafico2" width="417" height="196"/>
         <image name="Grama" width="853" height="533"/>
         <image name="Mercado" width="40" height="40"/>
         <image name="MinusIcon" width="36" height="35"/>
